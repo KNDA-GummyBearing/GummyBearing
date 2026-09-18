@@ -217,10 +217,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# 대용량 원본 및 가공 데이터
-/data/raw/
-/data/processed/
-
 # 압축된 데이터
 *.zip
 *.rar
@@ -232,3 +228,32 @@ __marimo__/
 
 # 개인 편집기 설정
 /.vscode/
+
+# Raw & Processed Data
+/DATA/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual Environment
+.venv/
+venv/
+.env
+.env.*
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 공유용 환경변수 예시 파일은 포함
+!.env.example
+
+# 프로젝트 내부에 생성한 Conda 환경
+.conda/
+
+# 추가 압축 형식
+*.tar
+*.tar.gz
