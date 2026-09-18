@@ -1,0 +1,13 @@
+name: GummyBearing
+channels:
+  - defaults
+dependencies:
+  - python=3.14
+  - numpy
+  - ipykernel
+  - scipy
+  - scikit-learn
+  - seaborn
+  - pandas
+  - matplotlib
+  - jupyterlab
