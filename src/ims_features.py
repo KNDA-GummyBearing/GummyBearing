@@ -2,10 +2,8 @@ from pathlib import Path
 from datetime import datetime
 import re
 
+import numpy as np
 import pandas as pd
-
-# 기존 calculate_features 이름도 그대로 import할 수 있다.
-from .common_features import calculate_features
 
 # 각 원본 열이 어느 베어링에 해당하는지 정의
 BEARING_MAP = {
@@ -23,6 +21,35 @@ FEATURE_COLUMNS = [
     "peak",
     "crest_factor",
 ]
+
+
+def calculate_features(signal):
+    """채널 하나의 진동값으로 특징 4개를 계산한다."""
+    x = np.asarray(signal, dtype=float)
+
+    if x.ndim != 1 or x.size == 0:
+        raise ValueError("비어 있지 않은 1차원 진동값이 필요합니다.")
+
+    if not np.isfinite(x).all():
+        raise ValueError("결측값 또는 무한대가 있습니다.")
+
+    rms = np.sqrt(np.mean(x**2))
+    peak = np.max(np.abs(x))
+
+    centered = x - np.mean(x)
+    variance = np.mean(centered**2)
+
+    # Pearson 첨도: 정규분포 기준 3, 편향 보정 없음
+    kurtosis = np.mean(centered**4) / variance**2 if variance > 0 else np.nan
+
+    crest_factor = peak / rms if rms > 0 else np.nan
+
+    return {
+        "rms": float(rms),
+        "kurtosis": float(kurtosis),
+        "peak": float(peak),
+        "crest_factor": float(crest_factor),
+    }
 
 
 def extract_ims_features(folder_path, test_number):
