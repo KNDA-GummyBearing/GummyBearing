@@ -14,7 +14,6 @@ import pandas as pd
 
 from .common_features import calculate_features
 
-
 CONDITIONS = {
     1: {"rpm": 2100, "load_kn": 12},
     2: {"rpm": 2250, "load_kn": 11},
@@ -58,7 +57,12 @@ VALUE_COLUMNS = [
     for feature in FEATURE_NAMES
 ]
 FEATURE_COLUMNS = [
-    "timestamp", "bearing", "condition", "rpm", "load_kn", "fault_element",
+    "timestamp",
+    "bearing",
+    "condition",
+    "rpm",
+    "load_kn",
+    "fault_element",
     *VALUE_COLUMNS,
 ]
 ERROR_COLUMNS = ["bearing", "filename", "error"]
@@ -84,7 +88,9 @@ def find_bearing_folders(data_root, bearings=None):
             candidates[path.name].append(path)
     for name, paths in candidates.items():
         if len(paths) != 1:
-            raise ValueError(f"{name} 폴더가 {len(paths)}개입니다. 경로를 확인하세요: {paths}")
+            raise ValueError(
+                f"{name} 폴더가 {len(paths)}개입니다. 경로를 확인하세요: {paths}"
+            )
     return {name: candidates[name][0] for name in names}
 
 
@@ -136,27 +142,33 @@ def extract_xjtu_features(folder_path, bearing):
             if df.shape != (32768, 2):
                 raise ValueError(f"예상 크기: (32768, 2), 실제 크기: {df.shape}")
             if list(df.columns) != SIGNAL_COLUMNS:
-                raise ValueError(f"예상 열: {SIGNAL_COLUMNS}, 실제 열: {list(df.columns)}")
+                raise ValueError(
+                    f"예상 열: {SIGNAL_COLUMNS}, 실제 열: {list(df.columns)}"
+                )
 
             values = {}
             for direction, column in zip(["horizontal", "vertical"], SIGNAL_COLUMNS):
                 features = calculate_features(df[column])
                 if not np.isfinite(list(features.values())).all():
-                    raise ValueError(f"{direction}: 상수 신호 등으로 특징을 계산할 수 없습니다.")
-                values.update({f"{direction}_{key}": value for key, value in features.items()})
-            rows.append({
-                "timestamp": timestamp,
-                "bearing": bearing,
-                "condition": metadata["condition"],
-                "rpm": metadata["rpm"],
-                "load_kn": metadata["load_kn"],
-                "fault_element": metadata["fault_element"],
-                **values,
-            })
+                    raise ValueError(
+                        f"{direction}: 상수 신호 등으로 특징을 계산할 수 없습니다."
+                    )
+                values.update(
+                    {f"{direction}_{key}": value for key, value in features.items()}
+                )
+            rows.append(
+                {
+                    "timestamp": timestamp,
+                    "bearing": bearing,
+                    "condition": metadata["condition"],
+                    "rpm": metadata["rpm"],
+                    "load_kn": metadata["load_kn"],
+                    "fault_element": metadata["fault_element"],
+                    **values,
+                }
+            )
         except Exception as error:
             record_error(path.name, error)
-        if number % 100 == 0 or number == len(ordered):
-            print(f"[{bearing}] {number}/{len(ordered)}개 파일 처리 완료")
 
     result_df = pd.DataFrame(rows, columns=FEATURE_COLUMNS)
     result_df = result_df.sort_values("timestamp").reset_index(drop=True)

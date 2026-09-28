@@ -25,8 +25,6 @@ FEATURE_COLUMNS = [
 ]
 
 
-
-
 def extract_ims_features(folder_path, test_number):
     """
     IMS 원본 폴더에서 파일별·채널별 특징을 계산한다.
@@ -120,9 +118,6 @@ def extract_ims_features(folder_path, test_number):
                     "error": str(error),
                 }
             )
-
-        if number % 100 == 0 or number == len(files):
-            print(f"[test {test_number}] " f"{number}/{len(files)}개 파일 처리 완료")
 
     result_df = pd.DataFrame(rows, columns=FEATURE_COLUMNS)
 
