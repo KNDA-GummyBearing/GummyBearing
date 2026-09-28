@@ -1,7 +1,9 @@
 import re
 import numpy as np
 from pathlib import Path
-from scipy.stats import kurtosis
+import pandas as pd
+
+from .common_features import calculate_features
 
 
 def extract_metadata(file_path):
@@ -68,22 +70,11 @@ def extract_metadata(file_path):
 
 
 def extract_features(signal):
-    """진동 신호의 특징값 추출"""
-
-    signal = np.asarray(signal, dtype=float).ravel()
-
-    if signal.size == 0:
-        raise ValueError("진동 데이터가 비어 있습니다.")
-
-    if not np.isfinite(signal).all():
-        raise ValueError("진동 데이터에 NaN 또는 무한대가 있습니다.")
-
-    rms = np.sqrt(np.mean(signal**2))
-    peak = np.max(np.abs(signal))
-
+    """공통 계산 함수를 사용하되 기존 CWRU의 반환 키를 그대로 유지한다."""
+    features = calculate_features(np.asarray(signal, dtype=float).ravel())
     return {
-        "RMS": rms,
-        "Kurtosis": kurtosis(signal, fisher=False),
-        "Peak": peak,
-        "Crest_Factor": peak / rms if rms > 0 else np.nan,
+        "RMS": features["rms"],
+        "Kurtosis": features["kurtosis"],
+        "Peak": features["peak"],
+        "Crest_Factor": features["crest_factor"],
     }
