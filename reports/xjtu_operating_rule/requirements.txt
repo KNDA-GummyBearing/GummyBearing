@@ -1,9 +1,0 @@
-# 실제 실행 검증 환경: Python 3.14.7
-numpy==2.5.2
-pandas==3.0.5
-scipy==1.18.1
-scikit-learn==1.9.1
-matplotlib==3.11.2
-nbformat==5.11.0
-# VS Code에서 이 환경을 노트북 커널로 선택함.
-ipykernel
