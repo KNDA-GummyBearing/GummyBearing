@@ -1,0 +1,57 @@
+/* [V10 BRAND UPDATE 2026-10-22] 원본 로고 픽셀·색은 수정하지 않고 표시 크기만 조절함. */
+.brand-on-light { display: block; }
+.brand-on-dark { display: none; }
+:root[data-theme="dark"] .brand-on-light { display: none; }
+:root[data-theme="dark"] .brand-on-dark { display: block; }
+
+/* [V10 BRAND UPDATE 2026-10-22] 고정된 다크 사이드바: 은색 160px 조합, 기존 접기 유지. */
+.sb-logo.brand-sidebar {
+  width: 160px; max-width: 160px; min-width: 0;
+  flex: 0 1 160px; display: flex; align-items: center; gap: 8px;
+  padding: 0; line-height: 1;
+}
+.brand-sidebar-symbol { display: block; width: 32px; height: 32px; object-fit: contain; flex: 0 0 32px; }
+.brand-sidebar-wordmark { display: block; width: 120px; height: auto; min-width: 0; object-fit: contain; }
+.sb-logo.brand-sidebar:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+.app.sb-collapsed .sb-logo.brand-sidebar { display: none; }
+
+/* [V10 BRAND UPDATE 2026-10-22] 로그인: 왼쪽 브랜드, 오른쪽 기존 계정 입력. */
+.login-panel.brand-login {
+  width: min(880px, 100%); max-width: 880px; padding: 0;
+  display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  overflow: hidden; text-align: left;
+}
+.login-brand-pane {
+  min-width: 0; padding: 44px 32px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+  background: linear-gradient(145deg, var(--panel-3), var(--panel-2));
+  border-right: 1px solid var(--line);
+}
+.brand-signature-vertical { width: 100%; max-width: 280px; }
+.brand-signature-horizontal { display: none; }
+.brand-signature-vertical img, .brand-signature-horizontal img { width: 100%; height: auto; object-fit: contain; }
+.brand-caption { margin: 0; font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--muted); text-align: center; }
+.login-form-pane { min-width: 0; padding: 44px 40px 36px; }
+.brand-login .login-form-pane h1 { margin: 0; font-size: 30px; line-height: 1.3; }
+.brand-login .st-lead { margin: 12px 0 0; font-size: 14px; line-height: 1.65; }
+.brand-login .login-form { max-width: none; margin: 24px 0 0; }
+.brand-login .st-foot { margin-top: 22px; font-size: 12px; line-height: 1.7; }
+
+@media (max-width: 900px) {
+  /* 모바일 사이드바는 기존처럼 펼친 메뉴를 표시하며 160px 로고 폭을 유지. */
+  .app.sb-collapsed .sb-logo.brand-sidebar { display: flex; }
+}
+
+@media (max-width: 700px) {
+  /* [V10 BRAND UPDATE 2026-10-22] 세로 공간을 줄인 한 열 로그인과 가로형 시그니처. */
+  .login-panel.brand-login { max-width: 440px; grid-template-columns: minmax(0, 1fr); border-radius: 20px; }
+  .login-brand-pane { padding: 20px 24px 18px; gap: 9px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .brand-signature-vertical { display: none; }
+  .brand-signature-horizontal { display: block; width: 210px; max-width: 100%; }
+  .brand-caption { font-size: 12px; }
+  .login-form-pane { padding: 24px 24px 26px; }
+  .brand-login .login-form-pane h1 { font-size: 25px; }
+  .brand-login .st-lead { margin-top: 8px; font-size: 13.5px; line-height: 1.55; }
+  .brand-login .login-form { margin-top: 18px; gap: 8px; }
+  .brand-login .st-foot { margin-top: 16px; }
+}

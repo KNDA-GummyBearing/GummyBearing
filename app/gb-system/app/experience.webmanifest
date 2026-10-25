@@ -1,0 +1,14 @@
+{
+  "id": "/experience/",
+  "name": "GB 설비 상태 체험",
+  "short_name": "GB 설비 체험",
+  "start_url": "/experience/#/",
+  "scope": "/experience/",
+  "display": "standalone",
+  "background_color": "#f1f4f6",
+  "theme_color": "#00547a",
+  "icons": [
+    {"src": "/assets/brand/pwa-user-v3-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/assets/brand/pwa-user-v3-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

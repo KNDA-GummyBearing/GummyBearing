@@ -1,0 +1,98 @@
+{
+  "assets/brand/pwa-user-v3-512.png": {
+    "file": "assets/optimized/brand__pwa-user-v3-512.png.webp",
+    "source_sha256": "1e28f6f456fac4ca9ac3e3d4c6b59e3a8ea67ebf1d4205ac91696d9c90c04386"
+  },
+  "assets/brand/role-people.png": {
+    "file": "assets/optimized/brand__role-people.png.webp",
+    "source_sha256": "0cd158a3b6c4b8f93f8938339d21b50107023a796cba1427a0bdb898b7426bad"
+  },
+  "assets/brand/symbol-navy.png": {
+    "file": "assets/optimized/brand__symbol-navy.png.webp",
+    "source_sha256": "3ffa493947a035916ff16b3dfb4d6731413ef23ec4b3eeb2ebb7ad66f818fa34"
+  },
+  "assets/brand/symbol-silver.png": {
+    "file": "assets/optimized/brand__symbol-silver.png.webp",
+    "source_sha256": "54802609f9a39d39d8c31d7f9369c0cc3ede63739ce5e2d8572c36a717542658"
+  },
+  "assets/brand/wordmark-navy.png": {
+    "file": "assets/optimized/brand__wordmark-navy.png.webp",
+    "source_sha256": "1a0a71e9464038a4bf1bf903f0abf8024762d5810841c74d72cdadb2982a9b6f"
+  },
+  "assets/brand/wordmark-silver.png": {
+    "file": "assets/optimized/brand__wordmark-silver.png.webp",
+    "source_sha256": "170933e22b96a88c35f0e769a19fd7d5b73cfaa4c313469fd1b5bb5be90f4a7b"
+  },
+  "assets/fan-states/fan01_dark_alarm.png": {
+    "file": "assets/optimized/fan-states__fan01_dark_alarm.png.webp",
+    "source_sha256": "aed1c006e762ff085e666ba4bc92702e0e1c85387af55255942ebe27c437f47a"
+  },
+  "assets/fan-states/fan01_dark_normal.png": {
+    "file": "assets/optimized/fan-states__fan01_dark_normal.png.webp",
+    "source_sha256": "73036a5cab439d658e177462d7312b5d23a5c7837ea3a48ba671dcaaa7584064"
+  },
+  "assets/fan-states/fan01_dark_warning.png": {
+    "file": "assets/optimized/fan-states__fan01_dark_warning.png.webp",
+    "source_sha256": "c901305ac95b3b9571da49c4618744849df49cea9012f3b838edf0eef1a45daa"
+  },
+  "assets/fan-states/fan01_light_alarm.png": {
+    "file": "assets/optimized/fan-states__fan01_light_alarm.png.webp",
+    "source_sha256": "6c9745931d667f413be794f01a4ebe50a4bac7e218d92bb2a1d82c98d00b54ff"
+  },
+  "assets/fan-states/fan01_light_normal.png": {
+    "file": "assets/optimized/fan-states__fan01_light_normal.png.webp",
+    "source_sha256": "6da0beed9b473944bc8319cbaa62dde39fb8485c913c833b56060c748952dba7"
+  },
+  "assets/fan-states/fan01_light_warning.png": {
+    "file": "assets/optimized/fan-states__fan01_light_warning.png.webp",
+    "source_sha256": "74438f0504a700df1dcc84c7b4f881b4c8114a324f3262f928e0a0850128b169"
+  },
+  "assets/fan-states/fan02_dark_alarm.png": {
+    "file": "assets/optimized/fan-states__fan02_dark_alarm.png.webp",
+    "source_sha256": "c64c4901d132ac51e806dfb1ab6f76dd5c44a715f80f5e338ffa9f4cde8d6b2e"
+  },
+  "assets/fan-states/fan02_dark_normal.png": {
+    "file": "assets/optimized/fan-states__fan02_dark_normal.png.webp",
+    "source_sha256": "e33cad3b91bbb39c65e154639cd17a46a9c94832bb2843d3b557ca5ba1ff296b"
+  },
+  "assets/fan-states/fan02_dark_warning.png": {
+    "file": "assets/optimized/fan-states__fan02_dark_warning.png.webp",
+    "source_sha256": "151f0fc01539b1483356d37c0367cf772133447f4a057190780ad777e13f4210"
+  },
+  "assets/fan-states/fan02_light_alarm.png": {
+    "file": "assets/optimized/fan-states__fan02_light_alarm.png.webp",
+    "source_sha256": "8d3d183e57a9bf4b2e06dc785aad9b0fa66501913bf9b51802d5324254bc647f"
+  },
+  "assets/fan-states/fan02_light_normal.png": {
+    "file": "assets/optimized/fan-states__fan02_light_normal.png.webp",
+    "source_sha256": "4ade2c60dc59944432b7cf445654b8043a1b65cd22859f0c6845daec9a768185"
+  },
+  "assets/fan-states/fan02_light_warning.png": {
+    "file": "assets/optimized/fan-states__fan02_light_warning.png.webp",
+    "source_sha256": "459f523cdea5f670f6e23c5625157c6076234d999ff032645ee211b02c909669"
+  },
+  "assets/img/map_dark.png": {
+    "file": "assets/optimized/img__map_dark.png.webp",
+    "source_sha256": "8438dc80bb2c07715f3ed027db542d5b3f944691b820dc75075d14426eaeed3e"
+  },
+  "assets/img/map_light.png": {
+    "file": "assets/optimized/img__map_light.png.webp",
+    "source_sha256": "23752f2f1b78548ed52c0705f7ad10cfc3af459409e5d5e8d3e5a47973cdaa2d"
+  },
+  "assets/img/plant_sinter_dark.png": {
+    "file": "assets/optimized/img__plant_sinter_dark.png.webp",
+    "source_sha256": "b3d7ed5ed172dcbeffafecb85f4f8dbe66ddebe722d4d8785a32fa3ea7705c0b"
+  },
+  "assets/img/plant_sinter_light.png": {
+    "file": "assets/optimized/img__plant_sinter_light.png.webp",
+    "source_sha256": "44b25dfb074753b15fe43a026ab9f529033a8d704edba0dcc563ab9d7c1a3ece"
+  },
+  "assets/img/plant_steel_dark.png": {
+    "file": "assets/optimized/img__plant_steel_dark.png.webp",
+    "source_sha256": "6c97ac2e04ffd41af03da0e2b6c78f636ca60480e6d4911fd4373855884a6298"
+  },
+  "assets/img/plant_steel_light.png": {
+    "file": "assets/optimized/img__plant_steel_light.png.webp",
+    "source_sha256": "5d80325cb982139b278b7195ca0590e61f96a5d38c4f2e5bc9d6776b8328bc6c"
+  }
+}

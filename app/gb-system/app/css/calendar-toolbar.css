@@ -1,0 +1,111 @@
+/* [RECORD TOOLBARS 2026-10-24]
+   Calendar: process -> equipment -> coloured record filters.
+   Maintenance history: process -> equipment -> inspection action.
+   Groups wrap in that same reading order when the main area becomes narrower.
+   Process scope, input handlers, exports and record tables stay intact. */
+.page > .record-toolbar {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px 16px;
+  position: static;
+  inset: auto;
+  transform: none;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 20px;
+  padding: 0;
+  overflow: visible;
+}
+
+.record-toolbar > .process-toolbar {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.record-toolbar .process-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
+  gap: 4px;
+  padding: 4px;
+}
+
+.record-toolbar .process-tabs button {
+  min-height: 40px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.record-toolbar > .record-equipment-filter {
+  flex: 0 1 210px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.record-toolbar .record-equipment-filter > label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.record-toolbar #eqFilter {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 40px;
+}
+
+.cal-toolbar > .cal-event-filters {
+  display: flex;
+  flex: 1 1 480px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cal-toolbar .cal-filter {
+  flex: 0 0 auto;
+  position: relative;
+  min-height: 36px;
+  max-width: 100%;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.record-toolbar > .record-toolbar-action {
+  flex: 0 0 auto;
+  max-width: 100%;
+  margin-left: auto;
+  white-space: normal;
+}
+
+@media (max-width: 650px) {
+  .page > .record-toolbar { gap: 12px; margin-bottom: 16px; }
+  .record-toolbar > .process-toolbar,
+  .record-toolbar > .record-equipment-filter,
+  .cal-toolbar > .cal-event-filters { flex-basis: 100%; }
+  .record-toolbar .process-tabs { width: 100%; }
+  .record-toolbar .process-tabs button { flex: 1 1 auto; min-height: 44px; }
+  .record-toolbar #eqFilter { min-height: 44px; }
+  .record-toolbar > .record-toolbar-action { width: 100%; margin-left: 0; justify-content: center; min-height: 44px; }
+  .cal-toolbar .cal-filter { min-height: 40px; padding: 8px 10px; }
+}

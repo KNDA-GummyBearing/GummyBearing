@@ -1,0 +1,46 @@
+/* Inherits the site's light/dark tokens. */
+.experience-start{min-height:100dvh;display:grid;align-items:center;background:var(--bg);color:var(--text);padding:40px 24px}
+.experience-start-wrap{width:100%;max-width:680px;margin:auto}
+.experience-brand{display:inline-flex;align-items:center;gap:12px;margin-bottom:32px;color:var(--text);text-decoration:none;font-size:24px;font-weight:800}
+.experience-brand img{border-radius:12px}.experience-brand small{display:block;margin-top:6px;color:var(--muted);font-size:12px;font-weight:500}
+.experience-scope-card{width:100%;min-height:310px;display:flex;align-items:flex-start;flex-direction:column;gap:22px;padding:40px;text-align:left;border:1px solid var(--line);border-radius:28px;background:var(--panel);color:var(--text);box-shadow:var(--shadow);cursor:pointer;font:inherit}
+.experience-scope-card:hover{border-color:var(--accent)}.experience-scope-card:disabled{opacity:.6;cursor:wait}
+.experience-card-badge{border-radius:999px;padding:7px 12px;background:var(--ok-bg);color:var(--primary);font-size:14px;font-weight:700}
+.experience-scope-card>strong{font-size:clamp(27px,4vw,38px);line-height:1.3;font-weight:800;letter-spacing:-1px;word-break:keep-all}
+.experience-scope-card>span:not(.experience-card-badge){color:var(--muted);font-size:18px;line-height:1.7;word-break:keep-all}
+.experience-scope-card>b{display:flex;align-items:center;gap:24px;margin-top:auto;padding-top:18px;color:var(--primary);font-size:18px}
+:root[data-theme=dark] .experience-card-badge,:root[data-theme=dark] .experience-scope-card>b{color:var(--accent)}
+.experience-feedback{font-size:14px;line-height:1.6;color:var(--muted)}.experience-feedback:empty{margin:0}
+.experience-start :is(button,a):focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+@media(max-width:600px){.experience-start{padding:24px 18px}.experience-scope-card{padding:30px 26px;gap:20px}.experience-scope-card>span:not(.experience-card-badge){font-size:16px}}
+body.personal-experience #start:not([hidden]){display:block;padding:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+body.personal-experience #start .experience-start{width:100%;min-width:0;box-sizing:border-box}
+/* Keep the existing read-only affordances; server rejects all business writes. */
+.personal-experience a[href$="/inspect"],
+.personal-experience a[href^="/api/export"],
+.personal-experience a[href^="/experience/api/export"],
+.personal-experience a[href="#/approvals"],
+.personal-experience a[href="#/mypage"],
+.personal-experience [data-done],
+.personal-experience #calForm,
+.personal-experience .maintenance-write,
+.personal-experience .maintenance-toolbar .record-toolbar-action,
+.personal-experience .draft-note{display:none!important}
+
+/* Public mobile header: the person outline fills the same 44px circle. */
+.personal-experience .header #userBtn{padding:0;min-width:44px;min-height:44px}
+.personal-experience .header #userBtn .avatar{width:44px;height:44px;flex-shrink:0}
+.personal-experience .header #userBtn .user-ico{width:44px;height:44px}
+.personal-experience .experience-user-pop{position:absolute;right:0;top:calc(100% + 12px);width:270px;max-width:calc(100vw - 32px);padding:8px;border:1px solid var(--line);border-radius:14px;background:var(--panel);box-shadow:var(--shadow-lg);z-index:65}
+.personal-experience .experience-user-pop[hidden]{display:none}
+.personal-experience .experience-user-pop button{width:100%;min-height:48px;display:flex;align-items:center;gap:10px;padding:12px;border:0;border-radius:9px;background:transparent;color:var(--text);font:inherit;font-size:15px;font-weight:700;cursor:pointer;text-align:left}
+.personal-experience .experience-user-pop button:hover{background:var(--panel-3)}
+.personal-experience .experience-user-pop button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.personal-experience .experience-user-pop .ico{width:22px;height:22px;flex-shrink:0}
+.personal-experience .experience-user-pop .chev{width:16px;height:16px;margin-left:auto}
+@media(max-width:900px){
+  .personal-experience .header #userBtn{width:44px;height:44px}
+  .personal-experience .process-toolbar{width:100%;max-width:100%;min-width:0}
+  .personal-experience .process-tabs{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+  .personal-experience .process-tabs button{min-width:0;padding:10px 6px;white-space:nowrap}
+}

@@ -1,0 +1,39 @@
+/* Same record values, a mobile reading layout. Desktop tables are unchanged. */
+.mypage .my-record-cards { display: none; }
+@media (max-width: 760px) {
+  .mypage .my-records .my-table-scroll { display: none; }
+  .mypage .my-record-cards {
+    display: grid; gap: 14px; padding: 0; margin: 20px 0 0; list-style: none;
+  }
+  .mypage .my-record-card {
+    min-width: 0; padding: 16px; border: 1px solid var(--line);
+    border-radius: 14px; background: var(--panel-2); color: var(--text);
+  }
+  .mypage .my-record-head { display: grid; gap: 8px; margin-bottom: 15px; }
+  .mypage .my-record-kind {
+    justify-self: start; padding: 4px 8px; border-radius: 6px;
+    background: var(--panel); color: var(--muted); font-size: 12px;
+  }
+  .mypage .my-record-head h4 { margin: 0; font-size: 17px; line-height: 1.45; }
+  .mypage .my-record-head a { color: var(--text); text-underline-offset: 4px; }
+  .mypage .my-record-fields { display: grid; gap: 12px; margin: 0; }
+  .mypage .my-record-fields > div {
+    display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 12px;
+  }
+  .mypage .my-record-fields dt { color: var(--muted); font-size: 12px; line-height: 1.6; }
+  .mypage .my-record-fields dd { margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.6; }
+  .mypage .my-record-fields .my-record-wide {
+    grid-template-columns: minmax(0, 1fr); gap: 5px;
+    padding-top: 12px; border-top: 1px solid var(--line);
+  }
+  .mypage .my-record-card :is(h4, dt, dd, a) {
+    min-width: 0; white-space: normal; word-break: keep-all; overflow-wrap: anywhere;
+  }
+  .mypage .my-record-wide dd { white-space: pre-wrap; }
+  .mypage .my-records { overflow: visible; }
+}
+@media (max-width: 360px) {
+  .mypage .my-record-card { padding: 13px; }
+  .mypage .my-record-fields > div { grid-template-columns: 78px minmax(0, 1fr); gap: 8px; }
+  .mypage .my-record-fields .my-record-wide { grid-template-columns: minmax(0, 1fr); }
+}

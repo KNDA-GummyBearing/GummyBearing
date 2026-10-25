@@ -1,0 +1,9 @@
+# Preserve reviewed release bytes, including mixed line endings. The build and
+# release manifests hash exact bytes; core.autocrlf must not rewrite these files.
+# This scope leaves the existing analysis/notebook Git settings unchanged.
+.gitattributes -text
+app/gb-system/** -text
+demos/** -text
+docs/final-pr/** -text
+tools/prepare_final_pr.py -text
+tools/validate_final_pr.py -text

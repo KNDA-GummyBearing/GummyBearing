@@ -1,0 +1,297 @@
+{
+  "GummyBearing_ERP_Demo.html": {
+    "sha256": "22e82c3173e2d35b492fba9baa00b8a53728fee7e4487ab70d5d8883a8082282",
+    "bytes": 99166,
+    "copy": "unchanged"
+  },
+  "rotating_equipment_dashboard_standalone.html": {
+    "sha256": "46a919397a880e4720bd6f6f03a14ccdf465d0d570a946618fcf73e481f50380",
+    "bytes": 15295,
+    "copy": "unchanged"
+  },
+  "GB_WEB.zip": {
+    "bytes": 995346845,
+    "sha256": "8d27fdf289f0b3a21b84cb1afd5b768ae0f0491bde170da37116ef99e6ff3051",
+    "selected_prefix": "GB_WEB/gummybearing-fan-service-v8/",
+    "archive_groups": {
+      "GB_WEB/.DS_Store": {
+        "files": 1,
+        "bytes": 22532
+      },
+      "GB_WEB/.claude": {
+        "files": 1,
+        "bytes": 896
+      },
+      "GB_WEB/GummyBearing_서비스_작업기록.md": {
+        "files": 1,
+        "bytes": 7227
+      },
+      "GB_WEB/POSCO_Color-System.pdf": {
+        "files": 1,
+        "bytes": 1700321
+      },
+      "GB_WEB/gummybearing-fan-service": {
+        "files": 32,
+        "bytes": 8686201
+      },
+      "GB_WEB/gummybearing-fan-service-v3": {
+        "files": 31,
+        "bytes": 6005310
+      },
+      "GB_WEB/gummybearing-fan-service-v3.zip": {
+        "files": 1,
+        "bytes": 4607174
+      },
+      "GB_WEB/gummybearing-fan-service-v4": {
+        "files": 32,
+        "bytes": 6256107
+      },
+      "GB_WEB/gummybearing-fan-service-v4.zip": {
+        "files": 1,
+        "bytes": 4847734
+      },
+      "GB_WEB/gummybearing-fan-service-v5": {
+        "files": 35,
+        "bytes": 7048717
+      },
+      "GB_WEB/gummybearing-fan-service-v5.zip": {
+        "files": 1,
+        "bytes": 5643713
+      },
+      "GB_WEB/gummybearing-fan-service-v6": {
+        "files": 36,
+        "bytes": 91936092
+      },
+      "GB_WEB/gummybearing-fan-service-v6.zip": {
+        "files": 1,
+        "bytes": 90002038
+      },
+      "GB_WEB/gummybearing-fan-service-v7": {
+        "files": 36,
+        "bytes": 91949157
+      },
+      "GB_WEB/gummybearing-fan-service-v7.zip": {
+        "files": 1,
+        "bytes": 90017712
+      },
+      "GB_WEB/gummybearing-fan-service-v8": {
+        "files": 36,
+        "bytes": 91951617
+      },
+      "GB_WEB/gummybearing-fan-service-v8.zip": {
+        "files": 1,
+        "bytes": 90018094
+      },
+      "GB_WEB/gummybearing-mysql-v8-login-mypage": {
+        "files": 71,
+        "bytes": 92366481
+      },
+      "GB_WEB/gummybearing-v9": {
+        "files": 94,
+        "bytes": 93326096
+      },
+      "GB_WEB/gummybearing-v9-20261022.zip": {
+        "files": 1,
+        "bytes": 90775252
+      },
+      "GB_WEB/gummybearing-v9-db-sql-20261022": {
+        "files": 7,
+        "bytes": 39829
+      },
+      "GB_WEB/mySQL_check": {
+        "files": 3,
+        "bytes": 45253
+      },
+      "GB_WEB/래퍼런스": {
+        "files": 35,
+        "bytes": 143156338
+      },
+      "GB_WEB/폰트": {
+        "files": 1,
+        "bytes": 6739336
+      },
+      "__MACOSX/._GB_WEB": {
+        "files": 1,
+        "bytes": 220
+      },
+      "__MACOSX/GB_WEB": {
+        "files": 573,
+        "bytes": 109224
+      }
+    },
+    "included_in_pr": false,
+    "reason": "Legacy v8 overlaps the final service; original ZIP and archived local copy retained.",
+    "archived_not_in_pr": [
+      {
+        "path": "demos/local-fan-v8/server.py",
+        "bytes": 6934,
+        "sha256": "774b4a3eeb4cf46f091955e75bfb8bd15ab941961f76c9cf37e8d69002e4e828"
+      },
+      {
+        "path": "demos/local-fan-v8/index.html",
+        "bytes": 5302,
+        "sha256": "32d28abf07b28789ca1dfc670ff20da15fa01f4f46f445292b897fddff1f8c49"
+      },
+      {
+        "path": "demos/local-fan-v8/Dockerfile",
+        "bytes": 215,
+        "sha256": "d01480cb34f7d78eddee63aed5601e707bd1162ed8b1ab804847b063981f249b"
+      },
+      {
+        "path": "demos/local-fan-v8/README.md",
+        "bytes": 15210,
+        "sha256": "40524da864e1037d26579574091829a962634370347af12a93b612afcbb84de3"
+      },
+      {
+        "path": "demos/local-fan-v8/tools/build_db.py",
+        "bytes": 19861,
+        "sha256": "7a4b00191da7d33ba71f61008589014561743fd834a9de92b6ea9e55d2a349a4"
+      },
+      {
+        "path": "demos/local-fan-v8/css/app.css",
+        "bytes": 74632,
+        "sha256": "d6e907475e4e4c45ca8b1fbb9d419c52ac735c18b99b638e91dcfb990b9dcc6e"
+      },
+      {
+        "path": "demos/local-fan-v8/js/chart.js",
+        "bytes": 8648,
+        "sha256": "d09d3bba6b23bb2ef229ab646e24daa11cbd535b3c9f04e43980110d19617531"
+      },
+      {
+        "path": "demos/local-fan-v8/js/store.js",
+        "bytes": 3268,
+        "sha256": "82658a23eecdebf8be3e9ca263610f02807ce291d8918f5727de49925687560f"
+      },
+      {
+        "path": "demos/local-fan-v8/js/engine.js",
+        "bytes": 7260,
+        "sha256": "4540f77bb894bdddc6038e5457aecb0da0b2360bba8925fb1b92b8b259b83304"
+      },
+      {
+        "path": "demos/local-fan-v8/js/app.js",
+        "bytes": 98799,
+        "sha256": "962d7f20f26a2352e79a23233e96f0064a75249a20eb259345b24579d78d6aa0"
+      },
+      {
+        "path": "demos/local-fan-v8/deploy/gummybearing.service",
+        "bytes": 789,
+        "sha256": "9054dbba65eb30bc8287f88d11193e3a3c694e2a23fad54c1ef96650f034e913"
+      },
+      {
+        "path": "demos/local-fan-v8/deploy/AWS_배포가이드.md",
+        "bytes": 3264,
+        "sha256": "453e2b7b7f674ff27c515630dd0ca275f790617046691ac577fc20b0de3eb888"
+      },
+      {
+        "path": "demos/local-fan-v8/docs/서비스_기획서.md",
+        "bytes": 17414,
+        "sha256": "a0341ee857939e9fff4fb2e69028d31f4003353faf0db2d79a79472f749852db"
+      },
+      {
+        "path": "demos/local-fan-v8/data/maintenance_reviews.csv",
+        "bytes": 588,
+        "sha256": "9991699577ad55b2d64bdd46471eff31ef2c92bfcc1f18632fbe575f328b1d42"
+      },
+      {
+        "path": "demos/local-fan-v8/data/maintenance_follow_ups.csv",
+        "bytes": 933,
+        "sha256": "7de99d1d9921ac57350af8993421a6f3ecfcfd00ce8078a09a642cf56e2455ac"
+      },
+      {
+        "path": "demos/local-fan-v8/data/maintenance_work_history.csv",
+        "bytes": 1598,
+        "sha256": "b96494fa639782caa3010b908f59e1b2e2b93cbb3653bb70efa52a56d5a3d071"
+      },
+      {
+        "path": "demos/local-fan-v8/data/maintenance_db.json",
+        "bytes": 11684,
+        "sha256": "3b19451088596e27d89889d4dba9d11a8632477a6e2b4cf12db8ef715868dffc"
+      },
+      {
+        "path": "demos/local-fan-v8/data/sensor_timeseries.csv",
+        "bytes": 345361,
+        "sha256": "e15f88f1294e2a945c66030eed45fcc74dcb5bf0681d9200d8ddf1ba2c9e04b3"
+      },
+      {
+        "path": "demos/local-fan-v8/data/equipment_db.csv",
+        "bytes": 2995,
+        "sha256": "8027d05cc1af48ae7f23badf7bda2ffa64ff60286c16695e1aeaa378336e7fb1"
+      },
+      {
+        "path": "demos/local-fan-v8/data/maintenance_inspections.csv",
+        "bytes": 1723,
+        "sha256": "b3b13292d959f7ed5f7d2b95158c9d9f359e91892936fb023449339eefa929ed"
+      },
+      {
+        "path": "demos/local-fan-v8/data/equipment_db.json",
+        "bytes": 7637,
+        "sha256": "1b81dbd2cb9218068ed3807c65bdb51fe4ac9f8f49d0080de28a932d6f29ae0d"
+      },
+      {
+        "path": "demos/local-fan-v8/data/source/XJTU_SY_service_db.csv",
+        "bytes": 1375958,
+        "sha256": "54845850707d9298ddbad9af0d29b54282e5a5a3cf263537d77f9543e097e594"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/plant_sinter_dark.png",
+        "bytes": 16285820,
+        "sha256": "b4fab79e6fe612570b43243094403cd663069e3ba333af87c5ff310fb93c7042"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/map_dark.png",
+        "bytes": 11921618,
+        "sha256": "d5b1e41d947d96ffc5198c06861b4102e5b08dc36d0cc9dbb01d5a45e726c500"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/map_light.png",
+        "bytes": 15171992,
+        "sha256": "3d9a17238435b0632a5dec85e7da0a4d981b671f47c70df40a01ce12c4f4ceb9"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/plant_steel_light.png",
+        "bytes": 13486564,
+        "sha256": "39325812b56d4e7da4a9985c1d33a8296144f5efdaa9fc336d9737a11000dc8f"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/fan01_light.png",
+        "bytes": 1803947,
+        "sha256": "f6a95bb5a149d4cae1ce2e0de66cb36033353456043f49f41e3d163a41ba93f9"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/fan01_dark.png",
+        "bytes": 1961556,
+        "sha256": "4e295bd1d62076266cb84eeea75cd156f2df39fcbf50882fb14c03332fc457ec"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/plant_steel_dark.png",
+        "bytes": 13404354,
+        "sha256": "7a9e6e5559c8349a7f8b3fb657d3d6e2c5082684e1a10ef7c7f8318538dccb25"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/fan02_light.png",
+        "bytes": 1389113,
+        "sha256": "cdf1d99aaaced92865095281f1704c580b220fc6bdd16f7bf0848a53d806b5f8"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/fan02_dark.png",
+        "bytes": 1922157,
+        "sha256": "52f4330f9f217d2babead0c5e88b356112cdba187530fddd32e779f36b60aec8"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/img/plant_sinter_light.png",
+        "bytes": 9611743,
+        "sha256": "f99ea4d4585e70ddbe5999aadc04a3a5eed811b9e2f8c509f2a8f9693d286c41"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/fonts/PretendardVariable.woff",
+        "bytes": 2954532,
+        "sha256": "83928e421578ed0be75685e00c4b3a23c80f82334158e23e76440c45f98a9626"
+      },
+      {
+        "path": "demos/local-fan-v8/assets/fonts/FONT_LICENSE.txt",
+        "bytes": 524,
+        "sha256": "f0fa8b5d826f0c01089ad105fad0c11be699d005d4d26204be343ef332e6c905"
+      }
+    ]
+  }
+}
