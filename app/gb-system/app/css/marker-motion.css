@@ -1,0 +1,68 @@
+/* [MAP MARKER MOTION 2026-10-24]
+   Animate only decorative rings: dot colours, hit areas, coordinates and labels
+   stay fixed. Existing updateProcess markup caching keeps the animation alive
+   between data ticks. The header's playback state pauses/resumes these rings. */
+.ov-view #mapMarkers .ov-pin-dot,
+.ov-view #mapZones > .ov-zone-pin .ov-zone-symbol {
+  position: relative;
+  overflow: visible;
+}
+
+.ov-view #mapMarkers .ov-pin { --marker-phase: -0.2s; }
+.ov-view #mapMarkers .ov-pin:nth-child(3n + 2) { --marker-phase: -0.7s; }
+.ov-view #mapMarkers .ov-pin:nth-child(3n) { --marker-phase: -1.1s; }
+.ov-view #mapZones > .ov-zone-pin { --marker-phase: -0.2s; }
+.ov-view #mapZones > .ov-zone-pin:nth-child(4n) { --marker-phase: -0.7s; }
+
+.ov-view #mapMarkers .ov-pin-dot::before,
+.ov-view #mapMarkers .ov-pin-dot::after,
+.ov-view #mapZones > .ov-zone-pin .ov-zone-symbol::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  box-sizing: border-box;
+  border: 2px solid var(--state);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.65);
+  transform-origin: center;
+  animation: gb-marker-ripple 2.8s ease-out infinite;
+  animation-delay: var(--marker-phase);
+  animation-play-state: paused;
+}
+
+.ov-view #mapMarkers .ov-pin-dot::after {
+  animation-delay: calc(var(--marker-phase) - 1.4s);
+}
+
+body[data-marker-playback='playing'] .ov-view #mapMarkers .ov-pin-dot::before,
+body[data-marker-playback='playing'] .ov-view #mapMarkers .ov-pin-dot::after,
+body[data-marker-playback='playing'] .ov-view #mapZones > .ov-zone-pin .ov-zone-symbol::after {
+  animation-play-state: running;
+}
+
+/* Keep the opaque label above its own rings; never pulse or translate text. */
+.ov-view #mapMarkers .ov-pin-label { z-index: 1; }
+
+@keyframes gb-marker-ripple {
+  0% { transform: scale(0.65); opacity: 0.38; }
+  72% { opacity: 0.10; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .ov-view #mapMarkers .ov-pin-dot::before,
+  .ov-view #mapMarkers .ov-pin-dot::after,
+  .ov-view #mapZones > .ov-zone-pin .ov-zone-symbol::after { inset: -5px; border-width: 1.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ov-view #mapMarkers .ov-pin-dot::before,
+  .ov-view #mapMarkers .ov-pin-dot::after,
+  .ov-view #mapZones > .ov-zone-pin .ov-zone-symbol::after {
+    animation: none;
+    opacity: 0;
+    transform: none;
+  }
+}

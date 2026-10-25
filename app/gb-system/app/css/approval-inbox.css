@@ -1,0 +1,14 @@
+/* Approval notices share the bell menu without changing equipment alarm colors. */
+.ap-section-title { padding: 10px 16px; margin: 0; font-size: 12px; font-weight: 800; color: var(--muted); background: var(--panel-2); border-bottom: 1px solid var(--line); }
+.ap-notice-item .ap-body { flex: 1; overflow-wrap: anywhere; }
+.ap-notice-icon { flex: 0 0 28px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; color: var(--primary); background: var(--panel-3); }
+.ap-notice-icon .ico { width: 18px; height: 18px; }
+.ap-notice-kind { color: var(--primary); }
+.ap-notice-message { white-space: pre-line; }
+.ap-inbox-error { margin: 0; padding: 12px 16px; color: var(--muted); font-size: 13px; }
+.ap-notice-icon.approval_approved { color: #27805b; }
+.ap-notice-icon.approval_rejected { color: #c53449; }
+:root[data-theme="dark"] .ap-notice-icon, :root[data-theme="dark"] .ap-notice-kind { color: var(--accent); }
+.ap-notice-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+.approval-card[data-request] { scroll-margin-top: calc(var(--header-bottom, 120px) + 16px); }
+.approval-card[data-request]:focus { outline: 2px solid var(--accent); outline-offset: 3px; }

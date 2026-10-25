@@ -1,0 +1,67 @@
+/* [UI UPDATE 2026-10-22] 경보 버튼과 계정 버튼을 독립된 클릭 영역으로 제공. */
+/* [V9.1 UI FIX 2026-10-22] 시계가 숨겨지는 태블릿에서도 우측 버튼 그룹의 정렬을 유지. */
+.hd-right { margin-left: auto; flex-shrink: 0; }
+.alarm-menu { position: relative; flex-shrink: 0; }
+.alarm-toggle {
+  position: relative; width: 44px; height: 44px; padding: 0;
+  display: grid; place-items: center; cursor: pointer;
+  color: var(--text-2); background: var(--panel);
+  border: 1px solid var(--line-2); border-radius: 50%;
+}
+.alarm-toggle .ico { width: 23px; height: 23px; }
+.alarm-toggle:hover, .alarm-toggle[aria-expanded="true"] { background: var(--panel-3); }
+.alarm-toggle .badge-count { top: -3px; right: -5px; pointer-events: none; }
+button.user { min-width: 44px; min-height: 44px; }
+.alarm-toggle:focus-visible, button.user:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px;
+}
+.alarm-menu .alarm-pop { top: calc(100% + 14px); }
+.my-logout { margin-top: 18px; min-height: 44px; }
+.my-logout:disabled { cursor: wait; opacity: .65; }
+.my-logout-error { margin: 12px 0 0; padding: 12px; font-size: 13px; }
+.my-logout-error[hidden] { display: none; }
+
+/* [UI UPDATE 2026-10-22] 종 버튼 추가 후 중간 폭에서 시계/검색창 겹침 방지. */
+@media (min-width: 901px) and (max-width: 1700px) {
+  .hd-title h1 { font-size: 22px; }
+  .hd-clock { font-size: 20px; white-space: nowrap; }
+  .hd-right { gap: 8px; }
+  .search input { width: 180px; }
+}
+@media (min-width: 901px) and (max-width: 1360px) { .hd-clock { display: none; } }
+
+/* [V9.1 UI FIX 2026-10-22] 좁은 태블릿은 제목만 필요한 만큼 줄이고 검색/이름/버튼은 유지.
+   재생 상태는 44px 표시등과 접근성 설명으로 확인하며 눌렀을 때 기존 설정이 열림. */
+@media (min-width: 901px) and (max-width: 1360px) {
+  .hd-left { min-width: 0; flex-shrink: 1; }
+  .hd-title { min-width: 0; }
+  .hd-title h1 { overflow: hidden; text-overflow: ellipsis; }
+}
+@media (min-width: 901px) and (max-width: 1180px) {
+  .live { flex-shrink: 0; }
+  .live-btn { width: 44px; height: 44px; padding: 0; justify-content: center; }
+  .live-btn .live-text { display: none; }
+}
+
+/* [UI UPDATE 2026-10-22] 알림은 실제 헤더 아래에 배치하고 헤더 버튼은 항상 누를 수 있게 유지. */
+@media (max-width: 900px) {
+  .header { padding-left: 12px; padding-right: 12px; gap: 8px; }
+  .hd-menu { width: 44px; height: 44px; flex-shrink: 0; }
+  .hd-left { min-width: 0; flex: 1 1 auto; gap: 6px; }
+  .hd-title { min-width: 0; }
+  .hd-title h1 { overflow: hidden; text-overflow: ellipsis; font-size: 17px; }
+  .hd-back { width: 32px; flex-shrink: 0; }
+  .live { flex-shrink: 0; }
+  /* [MOBILE BANNER FIX 2026-10-22] 재생 버튼도 44px 터치 영역을 확보. */
+  .live-btn { width: 44px; height: 44px; padding: 0; justify-content: center; }
+  .live-pop { position: fixed; top: calc(var(--header-bottom, 64px) + 8px); left: 12px; right: 12px; width: auto; }
+  .hd-right { gap: 4px; flex-shrink: 0; }
+  .theme-toggle { width: 44px; height: 44px; flex-shrink: 0; }
+  button.user { width: 44px; height: 44px; padding: 4px; justify-content: center; }
+  .alarm-menu .alarm-pop {
+    position: fixed; left: 12px; right: 12px; width: auto;
+    top: calc(var(--header-bottom, 64px) + 12px);
+    max-height: calc(100vh - var(--header-bottom, 64px) - 24px);
+    max-height: calc(100dvh - var(--header-bottom, 64px) - 24px);
+  }
+}

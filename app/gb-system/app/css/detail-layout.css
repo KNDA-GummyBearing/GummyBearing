@@ -1,0 +1,127 @@
+/* Equipment detail presentation: original images, bearing coordinates and
+   analysis stay unchanged. All rules are scoped to the shared detail page. */
+#view > .detail-layout { padding: 24px 24px 32px; --detail-chart-height: 300px; }
+.detail-layout .hero { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 18px; align-items: stretch; }
+.detail-layout .hero-card { display: flex; flex-direction: column; padding: 28px 30px 24px; }
+.detail-layout .hero-name { margin-top: 0; font-size: clamp(30px, 2.35cqw, 44px); line-height: 1.2; }
+.detail-layout .hero-sub { margin-top: 12px; font-size: 14px; line-height: 1.5; }
+.detail-layout .graph-sec { margin-top: 28px; padding-top: 0; border-top: 0; }
+.detail-layout .graph-head h3 { font-size: 19px; }
+.detail-layout .graph-controls { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.detail-layout .graph-controls .graph-tabs { margin: 0; gap: 5px; }
+.detail-layout .graph-controls .graph-tabs button { padding: 5px 10px; font-size: 12px; }
+.detail-layout .graph-controls .seg { flex: none; }
+.detail-layout .legend { font-size: 11px; gap: 4px 9px; margin-top: 9px; }
+.detail-layout .chart-note { font-size: 11px; line-height: 1.45; margin-top: 3px; }
+.detail-layout .detail-alarm-history { margin-top: 24px; padding-top: 0; }
+.detail-layout .detail-alarm-summary { display: grid; grid-template-columns: 88px minmax(0, 1fr); align-items: start; gap: 14px; margin-bottom: 20px; }
+.detail-layout .detail-alarm-summary h3 { font-size: 18px; font-weight: 800; margin: 0; line-height: 1.4; }
+.detail-layout .detail-alarm-history .facts { grid-template-columns: 1.35fr 1fr .75fr; padding: 0; margin: 0; gap: 0; border: 0; border-radius: 0; background: none; }
+.detail-layout .detail-alarm-history .facts > div { display: flex; flex-direction: column; justify-content: flex-start; gap: 7px; padding: 0 14px; border-left: 1px solid var(--line); min-width: 0; }
+.detail-layout .detail-alarm-history .facts > div:last-child { padding-right: 0; }
+.detail-layout .detail-alarm-history .facts span { font-size: 12px; line-height: 1.4; }
+.detail-layout .detail-alarm-history .facts b { text-align: left; font-size: 17px; line-height: 1.35; overflow-wrap: normal; }
+.detail-layout .detail-alarm-history .events { gap: 0; }
+.detail-layout .detail-alarm-history .events li { display: grid; grid-template-columns: 104px minmax(105px, .9fr) minmax(0, 1.4fr); gap: 10px; font-size: 12px; line-height: 1.5; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.detail-layout .detail-alarm-history .events.more { align-items: flex-end; margin-top: 12px; font-size: 12px; }
+.detail-layout .detail-events-empty { color: var(--muted); font-size: 13px; margin: 22px 0; }
+.detail-layout .hero-visual { display: flex; flex-direction: column; gap: 14px; margin: 0; min-height: 0; }
+.detail-layout .detail-topline { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.detail-layout .detail-topline > .card { min-width: 0; min-height: 110px; padding: 18px 22px; }
+.detail-layout .detail-status { display: flex; align-items: center; gap: 24px; }
+.detail-layout .detail-status-icon { --status-color: var(--ov-normal, #00a5e5); display: grid; place-items: center; flex: 0 0 64px; width: 64px; height: 64px; border-radius: 50%; color: #fff; background: var(--status-color); box-shadow: 0 0 0 6px color-mix(in srgb, var(--status-color) 23%, transparent), 0 0 0 13px color-mix(in srgb, var(--status-color) 10%, transparent); }
+.detail-layout .detail-status-icon:is(.c-경보, .st-경보) { --status-color: var(--alarm); }
+.detail-layout .detail-status-icon:is(.c-주의, .st-주의) { --status-color: var(--warn); }
+.detail-layout .detail-status-icon .tri { width: 43px; height: 43px; }
+.detail-layout .detail-status-icon .tri path:first-child { fill: none; stroke: #fff; stroke-width: 1.6; }
+.detail-layout .detail-status-icon .tri path:last-of-type { stroke: #fff; }
+.detail-layout .detail-status-icon .tri circle { fill: #fff; }
+.detail-layout .detail-status-icon .ico { width: 34px; height: 34px; color: #fff; }
+.detail-layout .detail-status-copy { min-width: 0; padding-left: 24px; border-left: 1px solid var(--line); }
+.detail-layout .detail-status h3 { font-size: clamp(21px, 1.7cqw, 29px); font-weight: 800; margin: 0 0 5px; line-height: 1.25; letter-spacing: -.04em; }
+.detail-layout .detail-status h3 [class^="c-"] { color: inherit; }
+.detail-layout .detail-status .status-desc { font-size: 13px; line-height: 1.35; margin: 0; }
+.detail-layout .hero-visual .cta { position: static; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 14px; width: auto; margin: 0; order: initial; box-shadow: var(--shadow); }
+.detail-layout .cta h3 { color: var(--text); font-size: 23px; letter-spacing: -.04em; }
+.detail-layout .cta p { font-size: 13px; line-height: 1.4; margin: 5px 0 0; }
+.detail-layout .cta .btn { width: auto; min-height: 48px; padding: 12px 24px; font-size: 14px; white-space: nowrap; border-radius: 999px; background: #192f61; border-color: #192f61; color: #fff; }
+.detail-layout .cta .draft-note { grid-column: 1 / -1; margin: 0; }
+/* A native-ratio stage keeps the equipment and its attached bearing marker
+   together. The 1.8:1 frame leaves room for all four reason cards below it. */
+.detail-layout .fan-img[data-fan-set] { aspect-ratio: 1.8; box-shadow: var(--shadow); }
+.detail-layout .fan-img[data-fan-set] .fan-stage { inset: 50% 0 auto auto; width: 118%; height: auto; aspect-ratio: 1672 / 941; transform: translateY(-50%); }
+.detail-layout .hotspot .hs-label { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 140ms ease; }
+.detail-layout .hotspot:hover .hs-label,
+.detail-layout .hotspot:focus-visible .hs-label { opacity: 1; visibility: visible; }
+.detail-layout .hotspot:focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; border-radius: 50%; }
+.detail-layout .hero-visual .reasons { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0; }
+.detail-layout .reasons[hidden] { display: none; }
+.detail-layout .reason { min-width: 0; min-height: 170px; padding: 16px; display: flex; flex-direction: column; }
+.detail-layout .reason h4 { font-size: 18.5px; line-height: 1.3; letter-spacing: -.04em; word-break: keep-all; }
+.detail-layout .reason .r-ico { color: var(--alarm); width: 28px; height: 28px; margin-bottom: 8px; flex: none; }
+.detail-layout .reason p, .detail-layout .reason .detail-line { font-size: 12px; line-height: 1.4; overflow-wrap: anywhere; }
+.detail-layout .reason .detail-line { margin-top: auto; padding-top: 12px; border-top: 0; }
+.detail-layout .lower { margin-top: 24px; }
+@container (max-width: 1450px) {
+  .detail-layout .hero-card { padding: 22px; }
+  .detail-layout .detail-topline > .card { padding: 16px; }
+  .detail-layout .detail-status { gap: 16px; }
+  .detail-layout .detail-status-icon { flex-basis: 48px; width: 48px; height: 48px; }
+  .detail-layout .detail-status-icon .tri { width: 32px; height: 32px; }
+  .detail-layout .detail-status-copy { padding-left: 16px; }
+  .detail-layout .hero-visual .cta { gap: 10px; }
+  .detail-layout .cta h3 { font-size: 20px; }
+  .detail-layout .cta .btn { padding: 10px 15px; font-size: 13px; }
+  .detail-layout .detail-alarm-summary { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .detail-layout .detail-alarm-history .facts > div:first-child { padding-left: 0; border-left: 0; }
+  .detail-layout .detail-alarm-history .facts b { font-size: 15px; }
+  .detail-layout .detail-alarm-history .events li { grid-template-columns: 90px minmax(0, 1fr); }
+  .detail-layout .detail-alarm-history .events li > span:last-child { grid-column: 2; }
+  .detail-layout .reason { padding: 12px; }
+  .detail-layout .reason h4 { font-size: 17px; }
+}
+@container (max-width: 1250px) {
+  .detail-layout .hero-visual .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .detail-layout .hero-visual .cta { grid-template-columns: minmax(0, 1fr); }
+}
+@container (max-width: 1050px) {
+  .detail-layout .hero { grid-template-columns: minmax(0, 1fr); }
+  .detail-layout .hero-visual { margin: 0; }
+  .detail-layout .hero-visual .cta { grid-template-columns: minmax(0, 1fr) auto; }
+  .detail-layout .detail-alarm-summary { grid-template-columns: 88px minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  #view > .detail-layout { padding: 16px 12px 24px; --detail-chart-height: 270px; }
+  .detail-layout .hero-card { padding: 18px; }
+  .detail-layout .hero-name { font-size: 28px; }
+  .detail-layout .hero-sub { font-size: 12px; }
+  .detail-layout .graph-controls { align-items: flex-start; gap: 8px; }
+  .detail-layout .graph-controls .graph-tabs { gap: 4px; }
+  .detail-layout .graph-controls .graph-tabs button { font-size: 10px; padding: 5px 7px; }
+  .detail-layout .detail-alarm-summary { grid-template-columns: minmax(0, 1fr); }
+  .detail-layout .detail-alarm-history .facts { grid-template-columns: 1.25fr 1fr .75fr; }
+  .detail-layout .detail-alarm-history .facts > div { padding: 0 8px; }
+  .detail-layout .detail-alarm-history .facts span { font-size: 10px; }
+  .detail-layout .detail-alarm-history .facts b { font-size: 13px; }
+  .detail-layout .detail-topline { grid-template-columns: minmax(0, 1fr); }
+  .detail-layout .hero-visual .cta { grid-template-columns: minmax(0, 1fr); }
+  .detail-layout .hero-visual .reasons { grid-template-columns: minmax(0, 1fr); }
+  .detail-layout .reason { padding: 18px; min-height: 0; }
+  .detail-layout .hotspot .hs-label { font-size: 11px; padding: 5px 7px; bottom: calc(100% + 12px); }
+  .detail-layout .fan-img[data-fan-set] .hotspot[data-bearing-side="NDE"] .hs-label { left: 50%; right: auto; transform: translateX(-50%); }
+  .detail-layout .fan-img[data-fan-set="01"] .hotspot[data-bearing-side="NDE"] .hs-label { left: 0; transform: none; }
+  .detail-layout .hotspot .hs-label small { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .detail-layout .hotspot .hs-label { transition: none; }
+}
+
+/* Keep the confirmed upcoming summary to one row on desktop. */
+.maintenance-page .upcoming { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.maintenance-page .upcoming > .up { min-width: 0; }
+@container (max-width: 800px) {
+  .maintenance-page .upcoming { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@container (max-width: 540px) {
+  .maintenance-page .upcoming { grid-template-columns: minmax(0, 1fr); }
+}

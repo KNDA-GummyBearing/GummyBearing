@@ -1,0 +1,106 @@
+/* [ROLE PREVIEW] Supplied illustration reused as a CSS sprite; original image unchanged. */
+.role-panel{position:relative;width:min(1120px,calc(100vw - 40px));background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:36px 56px 24px;text-align:center;box-shadow:0 24px 70px #002d4820;margin:auto}
+.role-logo{width:185px;height:auto;margin-bottom:10px}.role-panel h1{font-size:38px;margin:4px 0 12px;letter-spacing:-1.5px}.role-lead{color:var(--text-2);font-size:18px;margin:0 0 28px}
+.role-groups{display:grid;grid-template-columns:1fr 2fr;gap:48px;text-align:left}.role-groups h2{font-size:20px;margin:0 0 5px}.role-groups section>p{font-size:14px;color:var(--text-2);margin:0 0 16px}
+.role-chief{padding-right:36px;border-right:1px solid var(--line)}.role-field-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.role-card{display:flex;align-items:center;flex-direction:column;width:100%;border:1px solid var(--line-2);border-radius:18px;background:var(--panel);padding:18px 14px;cursor:pointer;color:var(--text);font:inherit;transition:transform .15s,box-shadow .15s}
+.role-card:hover,.role-card:focus-visible{border-color:#00547a;box-shadow:0 10px 30px #00547a22;transform:translateY(-3px)}.role-card strong{font-size:25px;margin:12px 0 8px}.role-card>span{font-size:15px}.role-title{color:var(--posco-blue);font-weight:700;margin-bottom:7px}.role-enter{font-size:14px;color:#00547a;margin-top:20px}.role-foot{color:var(--text-2);font-size:13px;margin-top:24px}.role-panel [role=alert]{color:#b62535;font-size:14px}
+/* [PORTRAIT FIX] Original 2172×724 art has uneven person positions.
+   Center each complete figure (x=426/1082/1721), then mask only the empty gutters.
+   Equal thirds plus a wide clip cut the outer arms of the first/third figures. */
+.role-avatar{display:block;width:170px;height:170px;position:relative;overflow:hidden;flex-shrink:0;clip-path:inset(0 5%);--portrait-left:-8.839779%}.role-avatar img{position:absolute;width:300%;height:100%;max-width:none;object-fit:fill;top:0;left:var(--portrait-left)}.role-avatar.avatar-1{--portrait-left:-99.447514%}.role-avatar.avatar-2{--portrait-left:-187.707182%}.my-profile .role-avatar{width:120px;height:120px;margin-bottom:16px}
+/* [FORM] Use both columns on desktop; preserve readable controls on tablets/phones. */
+.notice-log table{min-width:620px}.notice-log th:nth-child(3),.notice-log td:nth-child(3),.notice-log th:nth-child(4),.notice-log td:nth-child(4){white-space:nowrap}
+.form-wrap{max-width:none;width:100%;padding:24px 32px 32px;box-sizing:border-box}#fsInspect{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(320px,1fr);gap:24px;align-items:start}#fsInspect>.fsec{margin:0}#fsInspect .decisions{grid-template-columns:1fr}.form-wrap .field{min-width:0}.form-wrap .fgrid input{max-width:100%}
+/* [FORM FOOTER FIX] Keep actions after the input cards in document flow.
+   A sticky bottom bar previously painted across the memo and full-page screenshots. */
+.form-wrap .action-bar{position:static;bottom:auto;z-index:auto;max-width:none;width:100%;margin-top:24px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.notice-page{max-width:1250px;margin:auto}.notice-intro{margin-bottom:24px}.notice-intro h2{font-size:28px}.notice-intro p{color:var(--text-2);line-height:1.7}.notice-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.notice-card{padding:28px}.notice-card h3{font-size:23px;margin:0 0 12px}.notice-badge{display:inline-block;padding:5px 10px;background:#e5f2f8;color:#00547a;border-radius:20px;font-size:13px;margin-bottom:16px}.notice-card p,.notice-card li{font-size:15px;line-height:1.7;color:var(--text-2)}.notice-card ol{padding-left:20px}.notice-card input[type=email]{width:100%;box-sizing:border-box;margin:10px 0 16px;padding:13px;border:1px solid var(--line-2);border-radius:10px;background:var(--panel);color:var(--text)}.notice-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.notice-result{padding:16px 0;color:#00547a;min-height:30px}.notice-log{padding:24px;margin-top:24px}.notice-log h3{margin-bottom:14px}.notice-log table{width:100%;border-collapse:collapse}.notice-log td,.notice-log th{padding:12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}.notice-log .scroll{overflow:auto}.notice-foot{font-size:13px;color:var(--text-2);line-height:1.6;margin-top:20px}
+@media(max-width:1000px){#fsInspect{grid-template-columns:1fr}.role-panel{padding:28px}.role-groups{gap:24px}.role-chief{padding-right:22px}.role-avatar{width:135px;height:135px}}
+@media(max-width:650px){.role-panel{width:calc(100vw - 24px);padding:24px 18px;border-radius:20px;margin:14px auto}.role-panel h1{font-size:27px}.role-lead{font-size:15px}.role-groups{grid-template-columns:1fr;gap:24px}.role-chief{border-right:0;border-bottom:1px solid var(--line);padding:0 0 22px}.role-chief .role-card{max-width:100%}.role-field-cards{gap:12px}.role-card{padding:12px 6px}.role-avatar{width:120px;height:120px}.role-card strong{font-size:21px}.role-card>span{font-size:13px}.role-enter{margin-top:14px}.role-logo{width:140px}.role-foot{line-height:1.6}#start{overflow:auto;align-items:flex-start}.form-wrap{padding:16px 12px 24px}.form-wrap .action-bar .btn{flex:1 1 auto}.notice-grid{grid-template-columns:1fr}.notice-card{padding:20px}.notice-page.page{padding:16px}.notice-intro h2{font-size:24px}.section-head{gap:10px;flex-wrap:wrap}.section-head .btn{white-space:normal}}
+
+/* [ALL-ROLES RESPONSIVE] Size business pages from the available main area,
+   not the whole monitor: sidebar open/closed and all three roles share this rule.
+   Keep text readable; narrow tables scroll within their card instead of shrinking. */
+.main-wrap{--page-pad:clamp(16px,1.8cqw,36px);--page-gap:clamp(14px,1.5cqw,28px)}
+/* [SCROLL SHELL] Keep the sidebar/footer at the browser bottom. Long pages
+   scroll inside the main area, so the sidebar never ends halfway down a page. */
+html,body{height:100%;overflow:hidden}
+.app{height:100dvh;min-height:0;overflow:hidden}
+.sidebar{height:100dvh;min-height:0}
+.sb-nav{min-height:0;overscroll-behavior:contain}
+.sb-foot{flex-shrink:0}
+.main-wrap{height:100%;min-height:0;overflow-y:auto;overflow-x:hidden;scroll-padding-top:calc(var(--header-bottom,120px) + 16px)}
+.main-wrap>.header,.main-wrap>#view{flex-shrink:0}
+#view>.page,#view>.detail{width:100%;max-width:none;margin:0;padding:var(--page-pad) var(--page-pad) 32px}
+#view .page>.card,.notice-card,.notice-log,.my-profile,.my-records{min-width:0}
+#view .page h2{font-size:clamp(20px,1.55cqw,28px)}
+.section-head,.page-head,.filters,.cal-tools,.my-activity-head{min-width:0;gap:12px;flex-wrap:wrap}
+.filters{max-width:100%}.filters select,.filters input{min-width:0;max-width:100%}
+.tablewrap,.my-table-scroll,.notice-log .scroll{min-width:0;max-width:100%;overscroll-behavior-inline:contain}
+table.list th,table.list td,.my-records td,.notice-log td{font-size:clamp(13px,.94cqw,16px)}
+.page table.list th,.page table.list td{padding:clamp(10px,1.05cqw,18px) clamp(10px,1.1cqw,22px)}
+.upcoming{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:var(--page-gap)}
+.up{padding:clamp(16px,1.5cqw,26px)}
+.notice-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--page-gap)}
+.notice-card,.notice-log{padding:clamp(20px,1.8cqw,34px)}
+.notice-card p,.notice-card li{font-size:clamp(14px,1cqw,17px)}
+.notice-result:empty{min-height:0;padding:0;margin:12px 0}
+.mypage{grid-template-columns:minmax(230px,22%) minmax(0,1fr);gap:var(--page-gap)}
+.my-profile,.my-records,.my-counts .card{padding:clamp(18px,1.6cqw,30px)}
+.my-counts strong{font-size:clamp(30px,2.5cqw,44px)}
+.my-fields dd{font-size:clamp(14px,1cqw,18px)}
+.my-activity-head{align-items:center}
+.cal-layout{grid-template-columns:minmax(0,1fr) clamp(270px,24cqw,420px);gap:var(--page-gap)}
+.cal-day{min-height:clamp(100px,10dvh,150px)}
+.cal-side{top:calc(var(--header-bottom,120px) + 16px);min-width:0}
+.cal-head{flex-wrap:wrap;gap:12px}.cal-head .cal-nav{flex-wrap:wrap}
+.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--page-gap)}
+.hero>*{min-width:0}.lower{grid-template-columns:minmax(0,1fr) clamp(280px,24cqw,420px);gap:var(--page-gap)}
+.form-head{top:var(--header-bottom,120px)}
+.form-wrap{padding:var(--page-pad)}
+#fsInspect{gap:var(--page-gap)}
+.form-wrap .fsec{padding:clamp(18px,1.6cqw,30px)}
+.form-wrap .field>.flabel{font-size:clamp(13.5px,.95cqw,17px)}
+.form-wrap .field input,.form-wrap .field textarea,.form-wrap .opt span{font-size:clamp(13.5px,.92cqw,16px)}
+.form-wrap textarea{min-height:clamp(90px,10dvh,150px)}
+@container (max-width:1050px){
+  .hero,.lower,.cal-layout{grid-template-columns:minmax(0,1fr)}
+  .cal-side{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:var(--page-gap)}
+  .hero-visual{margin-top:16px}.hero-visual .cta{width:auto}
+}
+@container (max-width:800px){
+  .notice-grid,.mypage,#fsInspect{grid-template-columns:minmax(0,1fr)}
+  .my-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+  .my-profile .role-avatar{width:90px;height:90px;float:left;margin:0 22px 12px 0}
+  .my-profile .my-fields{clear:both}
+}
+@media(min-width:901px){
+  .ov-home-panels{width:min(1040px,calc(100% - 32px),max(460px,52cqw))}
+  .ov-process-panels{width:min(580px,calc(100% - 32px),max(350px,32cqw))}
+}
+@media(max-width:900px){
+  .cal-day{min-height:74px}.cal-side{display:flex}
+  .form-head{position:static}.mypage{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:500px){
+  .my-fields{grid-template-columns:minmax(0,1fr);gap:0}
+  .my-profile .role-avatar{width:80px;height:80px}
+  .notice-actions .btn{flex:1 1 auto}
+  .cal-head{padding:12px 8px}.cal-head .cal-nav{gap:3px}.cal-head .cal-nav h2{font-size:17px;padding:0 4px}
+}
+
+/* [APPROVAL WORKFLOW] Cards follow the main scroll area, with readable mobile controls. */
+.form-wrap .btn[hidden],.approval-nav-count[hidden]{display:none!important}
+.approval-nav-count{margin-left:auto;min-width:24px;padding:2px 7px;border-radius:20px;background:#f4ad34;color:#19222b;font-size:12px;font-weight:800;text-align:center}
+.sb-collapsed .approval-nav-count{position:absolute;right:3px;top:2px;min-width:17px;padding:1px 4px;font-size:10px}.sb-item{position:relative}
+.approvals-page .page-head h2{margin:0 0 8px}.approval-intro{color:var(--text-2);line-height:1.7;margin:0 0 20px}
+.approval-tabs{margin:0 0 20px;flex-wrap:wrap}.approval-list{display:grid;gap:20px}.approval-card{padding:clamp(18px,2cqw,32px);min-width:0}
+.approval-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}.approval-card-head h3{margin:12px 0;font-size:21px}.approval-card-head p{font-size:14px;line-height:1.7;margin:0}
+.approval-status{display:inline-block;padding:5px 10px;border-radius:20px;font-size:13px;font-weight:700}.approval-pending{background:#fff1d5;color:#8b5400}.approval-approved{background:#def2e8;color:#236747}.approval-rejected{background:#ffe5e7;color:#a72c42}
+.approval-summary{line-height:1.7;overflow-wrap:anywhere;margin:6px 0 20px}.approval-inspection{border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:20px}.approval-inspection summary{cursor:pointer;font-weight:700}.approval-inspection[open] summary{margin-bottom:16px}
+.approval-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:12px 0}.approval-details>div{min-width:0}.approval-details dt{color:var(--text-2);font-size:13px;margin-bottom:5px}.approval-details dd{font-size:15px;line-height:1.6;margin:0;overflow-wrap:anywhere;white-space:pre-wrap}
+.approval-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.approval-fields label{display:flex;flex-direction:column;gap:9px;font-size:14px;font-weight:600;min-width:0}.approval-fields input,.approval-fields select,.approval-fields textarea{border:1px solid var(--line-2);border-radius:9px;background:var(--field,var(--panel));color:var(--text);padding:12px;font:inherit;min-width:0;width:100%;box-sizing:border-box}.approval-fields textarea{min-height:85px;resize:vertical}.approval-wide{grid-column:1/-1}
+.approval-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:18px;flex-wrap:wrap}.approval-result{color:var(--text-2);font-size:14px;line-height:1.7}.approval-local-error{margin-top:12px}
+@container(max-width:800px){.approval-details,.approval-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.approval-details,.approval-fields{grid-template-columns:1fr}.approval-card-head{gap:8px}.approval-actions .btn{flex:1 1 auto}.approval-tabs{display:flex}.approval-tabs button{flex:1 1 auto}}
