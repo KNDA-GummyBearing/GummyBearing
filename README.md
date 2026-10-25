@@ -328,7 +328,7 @@ GummyBearing/
 
 <div align="center">
 
-| <img src="figures/readme/sssssumini.png" width="120" alt="김수민"> |<img src="figures/readme/min-jun-kang.png" width="120" alt="강민준"> |  <img src="figures/readme/onlynew203-cmyk.png" width="120" alt="정온유"> |
+| <img src="figures/readme/sssssumini.png" width="120" alt="김수민"> |<img src="figures/readme/Min_Jun_Kang.png" width="120" alt="강민준"> |  <img src="figures/readme/onlynew203-cmyk.png" width="120" alt="정온유"> |
 | :---: | :---: | :---: |
 | **김수민** | **강민준** | **정온유** |
 
