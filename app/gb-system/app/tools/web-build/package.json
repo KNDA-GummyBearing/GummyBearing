@@ -1,0 +1,6 @@
+{
+  "name": "gummybearing-web-build",
+  "private": true,
+  "scripts": { "build": "node build.mjs", "check": "node build.mjs --check" },
+  "devDependencies": { "esbuild": "0.25.12" }
+}

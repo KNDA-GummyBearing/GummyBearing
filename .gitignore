@@ -257,3 +257,35 @@ Desktop.ini
 # 추가 압축 형식
 *.tar
 *.tar.gz
+
+# Generated AWS deployment bundles and database snapshots
+/outputs/gummybearing-mysql-aws-*/
+
+# Final PR: keep working previews/backups locally; reviewed source is app/gb-system.
+# These rules exclude files from Git only. They do not remove local files.
+/outputs/
+/tmp/
+/app/gummybearing-aws-demo/
+/app/gummybearing-fan-service-v5/
+/app/gummybearing-fan-service-v8/
+/app/gummybearing-mysql-aws/
+/app/gummybearing-mysql-v5/
+
+# Intermediate IF experiments are consolidated in the committed 05 notebook
+# and xjtu_operating_rule results (commit 3a82c13); retain originals locally.
+/notebooks/05a_xjtu_if_integrated_6features_100trees.ipynb
+/notebooks/05b_xjtu_if_integrated_100trees_ddof1.ipynb
+/figures/xjtu_if_integrated_100/
+/figures/xjtu_if_integrated_100_ddof1/
+/results/xjtu_if_integrated_100/
+/results/xjtu_if_integrated_100_ddof1/
+
+# Runtime secrets/state and archive metadata are not source deliverables.
+.preview/
+.runtime/
+.secrets/
+__MACOSX/
+._*
+*.pem
+*.p12
+*.pfx

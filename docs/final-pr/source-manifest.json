@@ -1,0 +1,921 @@
+{
+  "source": "outputs/gummybearing-role-preview-20261023",
+  "target": "app/gb-system",
+  "status": "review-candidate; deployment evidence recorded separately",
+  "files": {
+    "app/.dockerignore": {
+      "sha256": "28895dd92cd0f3d0774fe30b38b67b7beb4b3d4af8da55d9203f808be291917b",
+      "bytes": 441
+    },
+    "app/approvals.py": {
+      "sha256": "094a08a57d81ad7436fbb6feafbb8d974fc39b57bd1fa31c6566f9b2c7487f1f",
+      "bytes": 35099
+    },
+    "app/assets/brand/apple-touch-icon-user-v3.png": {
+      "sha256": "e8e7ad4962a871f75d056e657f9f5a1c88d1df4725a780a729b5d67c621f3cff",
+      "bytes": 41601
+    },
+    "app/assets/brand/pwa-user-v3-192.png": {
+      "sha256": "66780431484c1239ae845083c2438f48f0862c3ee0f783e15d689d69cb33afbd",
+      "bytes": 46622
+    },
+    "app/assets/brand/pwa-user-v3-512.png": {
+      "sha256": "1e28f6f456fac4ca9ac3e3d4c6b59e3a8ea67ebf1d4205ac91696d9c90c04386",
+      "bytes": 263175
+    },
+    "app/assets/brand/role-people.png": {
+      "sha256": "0cd158a3b6c4b8f93f8938339d21b50107023a796cba1427a0bdb898b7426bad",
+      "bytes": 1144930
+    },
+    "app/assets/brand/symbol-navy.png": {
+      "sha256": "3ffa493947a035916ff16b3dfb4d6731413ef23ec4b3eeb2ebb7ad66f818fa34",
+      "bytes": 1214427
+    },
+    "app/assets/brand/symbol-silver.png": {
+      "sha256": "54802609f9a39d39d8c31d7f9369c0cc3ede63739ce5e2d8572c36a717542658",
+      "bytes": 1298683
+    },
+    "app/assets/brand/wordmark-navy.png": {
+      "sha256": "1a0a71e9464038a4bf1bf903f0abf8024762d5810841c74d72cdadb2982a9b6f",
+      "bytes": 725787
+    },
+    "app/assets/brand/wordmark-silver.png": {
+      "sha256": "170933e22b96a88c35f0e769a19fd7d5b73cfaa4c313469fd1b5bb5be90f4a7b",
+      "bytes": 732348
+    },
+    "app/assets/fan-states/fan01_dark_alarm.png": {
+      "sha256": "aed1c006e762ff085e666ba4bc92702e0e1c85387af55255942ebe27c437f47a",
+      "bytes": 1648209
+    },
+    "app/assets/fan-states/fan01_dark_normal.png": {
+      "sha256": "73036a5cab439d658e177462d7312b5d23a5c7837ea3a48ba671dcaaa7584064",
+      "bytes": 1611141
+    },
+    "app/assets/fan-states/fan01_dark_warning.png": {
+      "sha256": "c901305ac95b3b9571da49c4618744849df49cea9012f3b838edf0eef1a45daa",
+      "bytes": 1649050
+    },
+    "app/assets/fan-states/fan01_light_alarm.png": {
+      "sha256": "6c9745931d667f413be794f01a4ebe50a4bac7e218d92bb2a1d82c98d00b54ff",
+      "bytes": 1820053
+    },
+    "app/assets/fan-states/fan01_light_normal.png": {
+      "sha256": "6da0beed9b473944bc8319cbaa62dde39fb8485c913c833b56060c748952dba7",
+      "bytes": 1560734
+    },
+    "app/assets/fan-states/fan01_light_warning.png": {
+      "sha256": "74438f0504a700df1dcc84c7b4f881b4c8114a324f3262f928e0a0850128b169",
+      "bytes": 1743236
+    },
+    "app/assets/fan-states/fan02_dark_alarm.png": {
+      "sha256": "c64c4901d132ac51e806dfb1ab6f76dd5c44a715f80f5e338ffa9f4cde8d6b2e",
+      "bytes": 1658879
+    },
+    "app/assets/fan-states/fan02_dark_normal.png": {
+      "sha256": "e33cad3b91bbb39c65e154639cd17a46a9c94832bb2843d3b557ca5ba1ff296b",
+      "bytes": 1646677
+    },
+    "app/assets/fan-states/fan02_dark_warning.png": {
+      "sha256": "151f0fc01539b1483356d37c0367cf772133447f4a057190780ad777e13f4210",
+      "bytes": 1651969
+    },
+    "app/assets/fan-states/fan02_light_alarm.png": {
+      "sha256": "8d3d183e57a9bf4b2e06dc785aad9b0fa66501913bf9b51802d5324254bc647f",
+      "bytes": 1903202
+    },
+    "app/assets/fan-states/fan02_light_normal.png": {
+      "sha256": "4ade2c60dc59944432b7cf445654b8043a1b65cd22859f0c6845daec9a768185",
+      "bytes": 1688895
+    },
+    "app/assets/fan-states/fan02_light_warning.png": {
+      "sha256": "459f523cdea5f670f6e23c5625157c6076234d999ff032645ee211b02c909669",
+      "bytes": 1844407
+    },
+    "app/assets/fan-states/README.txt": {
+      "sha256": "3dcf98bba7edd66493ad034aa338c18212256ea5d8c884c7f568ec95c4642e46",
+      "bytes": 1263
+    },
+    "app/assets/fonts/FONT_LICENSE.txt": {
+      "sha256": "f0fa8b5d826f0c01089ad105fad0c11be699d005d4d26204be343ef332e6c905",
+      "bytes": 524
+    },
+    "app/assets/fonts/pretendard-core.woff": {
+      "sha256": "81fff48bfdb2353eb5605d67a44d53f3b75ee94b5777b50de10c0cdaaaa96821",
+      "bytes": 147064
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0000.woff": {
+      "sha256": "41e9a05f72dc7737709106c6181eedb0db3317e8f9151a88bc04c6e53ebee72e",
+      "bytes": 110600
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0001.woff": {
+      "sha256": "b5692f2407e4d7af8044b8688bededd7f18187681e7f631b42703a70453d59ed",
+      "bytes": 36640
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0003.woff": {
+      "sha256": "68f092502bdf4abcb25419e536763055657c76391c5dc49a11f1e6ade0c58d23",
+      "bytes": 1808
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0007.woff": {
+      "sha256": "afda05489c1f0b3cc5750c9e2c63b3f9fef11837e45f7c8fbf08b45e5e070977",
+      "bytes": 56268
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0008.woff": {
+      "sha256": "5543958b7f4ef9e1dfe05df11755359214d3d79ef8dce8ca7ff67a5a1c882ac3",
+      "bytes": 56816
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0009.woff": {
+      "sha256": "511b318309c5cdb6466f6c0f0739490b2795be6afc105928e53a4a94b334a956",
+      "bytes": 62656
+    },
+    "app/assets/fonts/pretendard-fallback-1024-000a.woff": {
+      "sha256": "a47e0debeb9f03f5d0ef1b402e798297fc0c6c8d7ac7fbc4c080f37ad7cb61e5",
+      "bytes": 2804
+    },
+    "app/assets/fonts/pretendard-fallback-1024-000b.woff": {
+      "sha256": "018aff81d01b0c9bf8e58c5dafba7b88e7e4b06bf61c499ae4a13c55f60fad1a",
+      "bytes": 2868
+    },
+    "app/assets/fonts/pretendard-fallback-1024-000c.woff": {
+      "sha256": "8b44b61a9ebc44e37a8a80c33e5ec06e335e02a15f6e33015b031e9f0c31b7dc",
+      "bytes": 64720
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0029.woff": {
+      "sha256": "efa4137f403404ac51561342d9cfa6cd416adfd7665bcdb6cad3e92d4b649f96",
+      "bytes": 1936
+    },
+    "app/assets/fonts/pretendard-fallback-1024-002a.woff": {
+      "sha256": "8b336887ee4b5128dbc2fcde88fd1da2b9929c42ed6e2b98ab9d786981ee7a6e",
+      "bytes": 1568
+    },
+    "app/assets/fonts/pretendard-fallback-1024-0038.woff": {
+      "sha256": "4532ace751302be4bff8209048f3fb9acc5359c409e6f2d25c5bfb01ef0d8ae7",
+      "bytes": 61996
+    },
+    "app/assets/fonts/pretendard-fallback-1024-003b.woff": {
+      "sha256": "0fcb61386983766fa735a9414701a8f2f72de109605faa4061894f04517f2ca4",
+      "bytes": 3492
+    },
+    "app/assets/fonts/pretendard-fallback-1024-003c.woff": {
+      "sha256": "fb98187ed5b14a752318b375725e564b9f7ec2416772e962cde68143229e46da",
+      "bytes": 47532
+    },
+    "app/assets/fonts/pretendard-fallback-1024-003d.woff": {
+      "sha256": "5d383d929c7cc0d24215aa59c8bd21bcb9f305f3689de5a3046a16c1b42cf466",
+      "bytes": 1464
+    },
+    "app/assets/fonts/pretendard-fallback-1024-003f.woff": {
+      "sha256": "467a3885921a909d9abf8297bda772fba7bfe78d9e216226ac7f276b9242211f",
+      "bytes": 52888
+    },
+    "app/assets/fonts/pretendard-fallback-1024-007c.woff": {
+      "sha256": "3699736d1dc70be36ba89d8c40f2b04aa65cb35833eef0ab7b0d1eb1b161e412",
+      "bytes": 28412
+    },
+    "app/assets/fonts/pretendard-fallback-1024-007e.woff": {
+      "sha256": "45e28532086b6baace94a682d3f7c0c8260219eb056d1024965e081df88840e0",
+      "bytes": 2064
+    },
+    "app/assets/fonts/pretendard-fallback-1024-03c0.woff": {
+      "sha256": "1fb9acff7e66c332f4eef0cadded9fbc1ebd8579736e518727e7942f2175d2ea",
+      "bytes": 2408
+    },
+    "app/assets/fonts/pretendard-fallback-256-00ac.woff": {
+      "sha256": "e188aaa29cfd63b199c1d1063494eec9ae99cf1e0918ebcfc77b12049f2109e2",
+      "bytes": 42372
+    },
+    "app/assets/fonts/pretendard-fallback-256-00ad.woff": {
+      "sha256": "c45d43811607f4d823a27f583719165ac390a5787228332e57b411f38796a56c",
+      "bytes": 57488
+    },
+    "app/assets/fonts/pretendard-fallback-256-00ae.woff": {
+      "sha256": "b6b8f3eb17947dd846a6ce81064dda23ffea0a8a37367f6c84906c21b6b537f8",
+      "bytes": 61656
+    },
+    "app/assets/fonts/pretendard-fallback-256-00af.woff": {
+      "sha256": "f5e4f75ef5cf9d7ae60b94b38b3c532f8539605bd5047cff9f259c60661529b5",
+      "bytes": 69800
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b0.woff": {
+      "sha256": "9f3ce1e7e45ee94cb3086ca932beedb582ca7e1e25e73a4a6f2bb761edccdbd4",
+      "bytes": 63408
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b1.woff": {
+      "sha256": "d38b0ff79ee873c0b3fa3c32b345cd050aa454e56453b1463b300395d735762a",
+      "bytes": 55836
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b2.woff": {
+      "sha256": "6f67567b1b8b3e2cf84365ad6fc463b94bdae3a45ff67b06b52e4e938a336a85",
+      "bytes": 51900
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b3.woff": {
+      "sha256": "55f2ede56d955eb2225cac58734abd631bd469ff1821040dc030d31899f38b8c",
+      "bytes": 52112
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b4.woff": {
+      "sha256": "f93a1eda5fb670dc299de66d99413d9f223e24d6c29d177126971be50d2be314",
+      "bytes": 53080
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b5.woff": {
+      "sha256": "fed98a250bec13c8b0e11c4439abca4f93715686a3dfbac993c86a5bb128fb67",
+      "bytes": 55844
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b6.woff": {
+      "sha256": "aea2bca0c6d657bce87e6b208c664b5990fd312226a336d4f2d7ff9c337f0a8e",
+      "bytes": 65864
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b7.woff": {
+      "sha256": "e8780fca10a85bb232f6435eb9b5f0c8c15e0590d6921e562c04ad2b92738d6a",
+      "bytes": 58720
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b8.woff": {
+      "sha256": "09b8282f249fef6fafdcd99f154864369428a439d7daecee672225c832af858e",
+      "bytes": 55036
+    },
+    "app/assets/fonts/pretendard-fallback-256-00b9.woff": {
+      "sha256": "0a33b067feb1c9230a2c5018cfa618df2f6437d32a6f3c0665cead0e93fc0db6",
+      "bytes": 53336
+    },
+    "app/assets/fonts/pretendard-fallback-256-00ba.woff": {
+      "sha256": "d494a234f506fde825ac63758273317f64faeca3f94e15b10024ddf552122a07",
+      "bytes": 48228
+    },
+    "app/assets/fonts/pretendard-fallback-256-00bb.woff": {
+      "sha256": "5409d4651c5f564e076b14cdb2f284168f48f7562ca4f93daaa47d674751fbd4",
+      "bytes": 52460
+    },
+    "app/assets/fonts/pretendard-fallback-256-00bc.woff": {
+      "sha256": "62f88f28b4a117e30e623472db075b95fcaed5962544ff700089ad1aa2d622c8",
+      "bytes": 42724
+    },
+    "app/assets/fonts/pretendard-fallback-256-00bd.woff": {
+      "sha256": "d5e88bc8367631c5bd7f23ff57eb8227198503b7e3ebcb361222dc8bfd5a29df",
+      "bytes": 56624
+    },
+    "app/assets/fonts/pretendard-fallback-256-00be.woff": {
+      "sha256": "eb3c03fad9b02e07a626ff9eb61f28ee526ceaec107a44f5c023c0ee2a1980a4",
+      "bytes": 48668
+    },
+    "app/assets/fonts/pretendard-fallback-256-00bf.woff": {
+      "sha256": "3d6491ccb2f661d9a3a8b2c442c5a6793f7107cb535be4afe4c9fd8fb87ab187",
+      "bytes": 55704
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c0.woff": {
+      "sha256": "55a92afce83c0b318cb0e9bfe48ba0e9945c6670e80975dd68abb3969574d4fb",
+      "bytes": 56672
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c1.woff": {
+      "sha256": "efeae2a597f2639a9b91f634eab35fbefeea6308abea3dbe070203172c49c931",
+      "bytes": 58360
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c2.woff": {
+      "sha256": "724a85c124d5494791ed7384814f381f65dbfc7358a763bd215a1630a4ff6d76",
+      "bytes": 64316
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c3.woff": {
+      "sha256": "667f8673eb36c2e7ed4fe331c14e74ccf86fbadf4b89bc4fe09405e75dda20d2",
+      "bytes": 62880
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c4.woff": {
+      "sha256": "e48772bd3cd928b2cd0cd5a94c6c38e0a9314a597d6da9b4d7a47e13cc481e34",
+      "bytes": 67872
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c5.woff": {
+      "sha256": "34a74c089cdebfddf271d0dd9422e61f7be26141dbdb8570db3245b06665fdda",
+      "bytes": 55816
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c6.woff": {
+      "sha256": "b2ed5f88e5a757b4a3f62d55cf0f55771a03d75ead9afaff6238c7274dff7f0e",
+      "bytes": 66592
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c7.woff": {
+      "sha256": "e314c46aab0c27013702682e99f78c1c42dfab9f768ce7016d44172bd97a5451",
+      "bytes": 58256
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c8.woff": {
+      "sha256": "9bd64afb7cc25cad2696bf3d53fcaa4184cc3f059a11cc18db35d30eedbcda33",
+      "bytes": 61284
+    },
+    "app/assets/fonts/pretendard-fallback-256-00c9.woff": {
+      "sha256": "14c37e1a0ce3e3eb3c04972310da7882123fb2379d7ef8178c08e58c317ec256",
+      "bytes": 65924
+    },
+    "app/assets/fonts/pretendard-fallback-256-00ca.woff": {
+      "sha256": "cc34659c7571732a49bad190333899dbd2340abf10f011a12930d39d62cff6e5",
+      "bytes": 63428
+    },
+    "app/assets/fonts/pretendard-fallback-256-00cb.woff": {
+      "sha256": "0f70325473fa2af9c7ef8b1e83f07e3bfa7226faa10e6c1531771de798b2f8c8",
+      "bytes": 72568
+    },
+    "app/assets/fonts/pretendard-fallback-256-00cc.woff": {
+      "sha256": "eae94738ddc02897fe14aeea88bdcd328ebc491256b5943e344439a450dfa47d",
+      "bytes": 57536
+    },
+    "app/assets/fonts/pretendard-fallback-256-00cd.woff": {
+      "sha256": "8b97d0df49cfc35f477a2625068a624183f4f920d1b869a73bf6dfa678691a83",
+      "bytes": 63544
+    },
+    "app/assets/fonts/pretendard-fallback-256-00ce.woff": {
+      "sha256": "dfbbbb3a090d4da1a1ce0f65e558fa691ca9a993cf0916150e7a8f614a55890c",
+      "bytes": 59724
+    },
+    "app/assets/fonts/pretendard-fallback-256-00cf.woff": {
+      "sha256": "fc31f7db32e1bf608d14f12af5fa32cd9206935a15474366e2423767ac8b3cf4",
+      "bytes": 59868
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d0.woff": {
+      "sha256": "7540ab268e6516363aed754dd77056d821eeac1ac1ae5fae839eb4bdfb79053f",
+      "bytes": 62740
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d1.woff": {
+      "sha256": "e428927729de18c5ba7007741bdbfb4ea6a62481e249c4d64176a2f73b012f9f",
+      "bytes": 55716
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d2.woff": {
+      "sha256": "1b18ab56c3c4e1743522f11f11573e5009e66f467db162815960f545f8c96551",
+      "bytes": 55904
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d3.woff": {
+      "sha256": "80b3a21b56d3c169c8f34744ebf13e38230a52ac32f786777ded89e36f392135",
+      "bytes": 48180
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d4.woff": {
+      "sha256": "1280692433f37a46dd1acd14f52fa20a4ec7af95d24cc2642b6e023f207c63de",
+      "bytes": 55568
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d5.woff": {
+      "sha256": "b86b4ff68b3321d1ca5384d8d24784cca905b4676615c748e3e8e99671e5a16f",
+      "bytes": 57632
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d6.woff": {
+      "sha256": "ef2cd79487e45c9bd6f6e1115776f436f82043664db38623f421127552b9d6e4",
+      "bytes": 73444
+    },
+    "app/assets/fonts/pretendard-fallback-256-00d7.woff": {
+      "sha256": "f7852cd4e19dac448ac5d2e94e9d7a28f41c832b0aa59ff3f683b69d0a5510d1",
+      "bytes": 47208
+    },
+    "app/assets/fonts/PretendardVariable.woff": {
+      "sha256": "83928e421578ed0be75685e00c4b3a23c80f82334158e23e76440c45f98a9626",
+      "bytes": 2954532
+    },
+    "app/assets/img/map_dark.png": {
+      "sha256": "8438dc80bb2c07715f3ed027db542d5b3f944691b820dc75075d14426eaeed3e",
+      "bytes": 6433992
+    },
+    "app/assets/img/map_light.png": {
+      "sha256": "23752f2f1b78548ed52c0705f7ad10cfc3af459409e5d5e8d3e5a47973cdaa2d",
+      "bytes": 5728663
+    },
+    "app/assets/img/plant_sinter_dark.png": {
+      "sha256": "b3d7ed5ed172dcbeffafecb85f4f8dbe66ddebe722d4d8785a32fa3ea7705c0b",
+      "bytes": 4754817
+    },
+    "app/assets/img/plant_sinter_light.png": {
+      "sha256": "44b25dfb074753b15fe43a026ab9f529033a8d704edba0dcc563ab9d7c1a3ece",
+      "bytes": 3638005
+    },
+    "app/assets/img/plant_steel_dark.png": {
+      "sha256": "6c97ac2e04ffd41af03da0e2b6c78f636ca60480e6d4911fd4373855884a6298",
+      "bytes": 5304185
+    },
+    "app/assets/img/plant_steel_light.png": {
+      "sha256": "5d80325cb982139b278b7195ca0590e61f96a5d38c4f2e5bc9d6776b8328bc6c",
+      "bytes": 3797899
+    },
+    "app/assets/optimized/brand__pwa-user-v3-512.png.webp": {
+      "sha256": "51a34ea6dce3f14ac17995f82e63327b6bdc624ac72b0d8cb96ef68dacba70b8",
+      "bytes": 198522
+    },
+    "app/assets/optimized/brand__role-people.png.webp": {
+      "sha256": "6a12ecbab8a7c5fc6f6f231701e1c485cbb7b870776cf33f20c93f89eb10e728",
+      "bytes": 560724
+    },
+    "app/assets/optimized/brand__symbol-navy.png.webp": {
+      "sha256": "c5ef31f7c9e48ebde7c41434f4413563963fb91970f2d74e758c019433205bf1",
+      "bytes": 583982
+    },
+    "app/assets/optimized/brand__symbol-silver.png.webp": {
+      "sha256": "182e030f2a933f314c607f9b8975b746ac6f7ac552df4c48784606d3bd0e15af",
+      "bytes": 609318
+    },
+    "app/assets/optimized/brand__wordmark-navy.png.webp": {
+      "sha256": "8811a8b731cf5e8ee8de1f716f27ea1653f1c2a2cbf8acca75e55708cfba224e",
+      "bytes": 420288
+    },
+    "app/assets/optimized/brand__wordmark-silver.png.webp": {
+      "sha256": "af4277e3a5252db5b4548acbe78ef05044a4fc1a0bd770118bf19faea2c8d2de",
+      "bytes": 345232
+    },
+    "app/assets/optimized/fan-states__fan01_dark_alarm.png.webp": {
+      "sha256": "f16ba4e77aede95d85898902be7bea20e601187c773f6c01b1b7581a5ce36791",
+      "bytes": 1109110
+    },
+    "app/assets/optimized/fan-states__fan01_dark_normal.png.webp": {
+      "sha256": "8786fcab40031fcee7231946577ff68cabbb2e205eab3f0b23edd1322c56b1fc",
+      "bytes": 1108468
+    },
+    "app/assets/optimized/fan-states__fan01_dark_warning.png.webp": {
+      "sha256": "b8e9603b90385d732160bb9cb90ac97fd76ba702c5de2659876fc5a396337106",
+      "bytes": 1108814
+    },
+    "app/assets/optimized/fan-states__fan01_light_alarm.png.webp": {
+      "sha256": "54697933315cdd9ecefdb0c37ec03acbd8314294ff382d53e2df8de10df230ef",
+      "bytes": 1244082
+    },
+    "app/assets/optimized/fan-states__fan01_light_normal.png.webp": {
+      "sha256": "e99bdc40aaa7da829ad673cc0ff9dadb671144e7b5739d40da04b68463ab3508",
+      "bytes": 1104564
+    },
+    "app/assets/optimized/fan-states__fan01_light_warning.png.webp": {
+      "sha256": "de5997478efbff9add67a067019cafc944aeb85dbbb57c3ccb30734f8778f21a",
+      "bytes": 1176700
+    },
+    "app/assets/optimized/fan-states__fan02_dark_alarm.png.webp": {
+      "sha256": "517a5a5128d5bbd509e47083f3c02d8965aa71c731c4c48efa37b0a850eb32ca",
+      "bytes": 1143188
+    },
+    "app/assets/optimized/fan-states__fan02_dark_normal.png.webp": {
+      "sha256": "a3db1251b4a2ed61100c46acde3adadf6f803db6448f7d1e187753fb3f93cff7",
+      "bytes": 1132672
+    },
+    "app/assets/optimized/fan-states__fan02_dark_warning.png.webp": {
+      "sha256": "74fe0faca9863177dc3ea04ebd3a1cf5708007c5c207997de49073eca1c44048",
+      "bytes": 1137784
+    },
+    "app/assets/optimized/fan-states__fan02_light_alarm.png.webp": {
+      "sha256": "6808f6adba448827ad2894aaf6ca7186a20ca20e6bbdc7190bc89e941a4e5f3b",
+      "bytes": 1253914
+    },
+    "app/assets/optimized/fan-states__fan02_light_normal.png.webp": {
+      "sha256": "fa788c550243d25656dfe11a3ddc4b554f83c6517c6abc716cbfc6d855bc24c0",
+      "bytes": 1147012
+    },
+    "app/assets/optimized/fan-states__fan02_light_warning.png.webp": {
+      "sha256": "09fc8b49ee4f11dcba79bc40d370f58914ef86ba8ad96ed34539755812e70d73",
+      "bytes": 1214508
+    },
+    "app/assets/optimized/img__map_dark.png.webp": {
+      "sha256": "3a40a64ba95583e5abc0df325694481a0afe7f84573c9253b1ec76c05f0365c3",
+      "bytes": 4163336
+    },
+    "app/assets/optimized/img__map_light.png.webp": {
+      "sha256": "e529718f5c3a822231ffbc7fdbbb654ee5ced4f2e89ac1320898bd9fb964ce35",
+      "bytes": 3691476
+    },
+    "app/assets/optimized/img__plant_sinter_dark.png.webp": {
+      "sha256": "3dc5ff295e54e96db3315909e0df9607255fea7063514fed83d2284c1aa1b295",
+      "bytes": 3097872
+    },
+    "app/assets/optimized/img__plant_sinter_light.png.webp": {
+      "sha256": "622302ea8b84ed16320a5fe32b2422557687271416027a564b2e66e94332f7ee",
+      "bytes": 2345826
+    },
+    "app/assets/optimized/img__plant_steel_dark.png.webp": {
+      "sha256": "5c18021d7fb95019831c41a81e6ff765bd70ba427b4834f1d90fdb4ba403e7c2",
+      "bytes": 3446872
+    },
+    "app/assets/optimized/img__plant_steel_light.png.webp": {
+      "sha256": "e9a5c01d39421ea520e918a4b1cb2801a95cf5fd304aa58d6d265b5d22f41c19",
+      "bytes": 2440494
+    },
+    "app/assets/optimized/manifest.json": {
+      "sha256": "95cbd2e2783bd68e492cb5202be3fe121f03cea3b01a01fa966a3c45544c1727",
+      "bytes": 4853,
+      "source_sha256": "03497e8a00ab4ba33c66f8a4485e5d11b2a8764b1e5663ce7f7b1a529897f0b5",
+      "transform": "Filter optimized-image index to included assets only"
+    },
+    "app/auth.py": {
+      "sha256": "1bfbddd52619f597c3f2dc0b8cfd666687c2dba0ef600a0461709c251a1f3f0f",
+      "bytes": 9736
+    },
+    "app/bell.py": {
+      "sha256": "33d1c891fc5623c50751abc1bcbc9bf0c5bfa7c3a32169df1afeedde93de8259",
+      "bytes": 6013
+    },
+    "app/css/app.css": {
+      "sha256": "27a79d799a3aa0b368c7d41a10a3194ca82cf969a18542251d85d8276787e139",
+      "bytes": 85059
+    },
+    "app/css/approval-inbox.css": {
+      "sha256": "0bda9579bdb6ef7b383392c45eba53a8fba36597e1d4ff4f371f46c4a75f169b",
+      "bytes": 1217
+    },
+    "app/css/branding.css": {
+      "sha256": "01d195ada94e555d4df06b542bca4d2d9ecc40d5e6cb329704275aff9f55cfff",
+      "bytes": 3322
+    },
+    "app/css/calendar-toolbar.css": {
+      "sha256": "109f1804d0524de789636be9524432bc957c743a5a332d8a00c3b3a567ccbc54",
+      "bytes": 2494
+    },
+    "app/css/completion-approval.css": {
+      "sha256": "e023ceab3a61f7255881f55af5d154d6e112df36b9adf0ab33d40c9dbba5b076",
+      "bytes": 1583
+    },
+    "app/css/detail-layout.css": {
+      "sha256": "0943390eb1824ee04a09e03a1e1a2310c73e68320f13c223823d7048a0cd09c6",
+      "bytes": 10612
+    },
+    "app/css/experience.css": {
+      "sha256": "85adc2d31b95249b34231dbab41952cf884571c74b83b462e77ef3a346df0250",
+      "bytes": 4446
+    },
+    "app/css/font-subsets.css": {
+      "sha256": "b6ec0a7531f3733b4d45efe12f9303a21e484b33a587cf3009d8b08e2ebdb1c5",
+      "bytes": 23289
+    },
+    "app/css/header-account.css": {
+      "sha256": "d0ea3db37901b8042ca6a56836c5e8d6489ba9d4b0bebe03f3894acda379a00f",
+      "bytes": 3483
+    },
+    "app/css/home-layout.css": {
+      "sha256": "0cbed15c6781e2aa6a13bb13f733ab80ce16c2307f1b9c72ba353e0ae1795657",
+      "bytes": 14763
+    },
+    "app/css/inspection-report.css": {
+      "sha256": "1726ae583a12cde9737849a5d1e8bcd7ad76bcaa6a44cda5e3a698f75b6e9698",
+      "bytes": 8801
+    },
+    "app/css/marker-motion.css": {
+      "sha256": "e9a1606b57c07dacb523bf36a7c9484fa38623394789ed050ebd232e8bdc16ad",
+      "bytes": 2451
+    },
+    "app/css/mypage-mobile.css": {
+      "sha256": "426916c7b4175a2a1fbfc6d726824939e9c745e836e1f856a90ac765e3ec6c4a",
+      "bytes": 1922
+    },
+    "app/css/process-hover.css": {
+      "sha256": "db9d6319e73d87bb40c920bce595f90f1679dd27f8c963baad5aaa86c914eb5e",
+      "bytes": 5295
+    },
+    "app/css/report-preview.css": {
+      "sha256": "bb7926509987fd9cb3549a1b074bf83bc0cb954eecfce9f42071ebd9bf3c2642",
+      "bytes": 3635
+    },
+    "app/css/role-preview.css": {
+      "sha256": "a6aa1980eaa240e40bc7367a1493d1e2f4dfec4d9eb43a1b0d405119b5d563d7",
+      "bytes": 12707
+    },
+    "app/css/screen-update.css": {
+      "sha256": "b8aa3b58a738eccaa650738ca84ad364f19b335b077edaef6a98fcc5d81a22a3",
+      "bytes": 26508
+    },
+    "app/css/site.48fb0c6f4ba99b1a.css": {
+      "sha256": "48fb0c6f4ba99b1a38529296c4ed8db5de6109ff1b18c3dfda80ad3f6c1b16be",
+      "bytes": 224169
+    },
+    "app/data/equipment_db.json": {
+      "sha256": "1b81dbd2cb9218068ed3807c65bdb51fe4ac9f8f49d0080de28a932d6f29ae0d",
+      "bytes": 7637
+    },
+    "app/data/maintenance_db.json": {
+      "sha256": "08a54aa8f0e0cc4ee62c5f1164b2009b8e70e4149f1bad69abafb0d187a65b9c",
+      "bytes": 10561
+    },
+    "app/data/sensor_timeseries.csv": {
+      "sha256": "e15f88f1294e2a945c66030eed45fcc74dcb5bf0681d9200d8ddf1ba2c9e04b3",
+      "bytes": 345361
+    },
+    "app/data/source/XJTU_SY_service_db.csv": {
+      "sha256": "54845850707d9298ddbad9af0d29b54282e5a5a3cf263537d77f9543e097e594",
+      "bytes": 1375958
+    },
+    "app/Dockerfile": {
+      "sha256": "d97e8bd71e78aade10e8bdd06df0b8e1cdc7725fb4d7f0bf08c1030d621375bc",
+      "bytes": 700
+    },
+    "app/experience-sw.js": {
+      "sha256": "37c5d3931b7448f016bb30950126c394e7ca55e585f39fed3e62b9272c80c598",
+      "bytes": 2408
+    },
+    "app/experience.py": {
+      "sha256": "829baa8ea56585bf6fdf43e3b09fcc0914c48a776d82ec55d81167f526937c3c",
+      "bytes": 31856
+    },
+    "app/experience.webmanifest": {
+      "sha256": "a2370876f4b199d7f124aa9900dabfee0e85b047d626b76291c5eac09b8bbc8c",
+      "bytes": 484
+    },
+    "app/export_xlsx.py": {
+      "sha256": "020a9fe12c3f60d82f4bc4a6ccbe2740bd5d7442b69ce4ccbc4bbda89aeb53c1",
+      "bytes": 2855
+    },
+    "app/index.html": {
+      "sha256": "a51bb8ba3600cf0852beeb8ed5b992ca77135fedf0e4f5996d54984f48bd70d3",
+      "bytes": 7889
+    },
+    "app/js/alarm-reporter.js": {
+      "sha256": "56835775edf88612437b00819be05d54d65fcb891d5992859db7502481b0496b",
+      "bytes": 3504
+    },
+    "app/js/app.ffbb11e49a650f83.js": {
+      "sha256": "ffbb11e49a650f83eb5ade5d083f2d0812902d2ab21a0bc6f6bd8197269c8033",
+      "bytes": 202140
+    },
+    "app/js/app.js": {
+      "sha256": "5f82769451141b1a94a32609c6aef0d97732992b44941f4dbfec609576fb18a4",
+      "bytes": 129952
+    },
+    "app/js/approval-inbox.js": {
+      "sha256": "97f5f5f8ff3cd3b2af3247facf44931d2aeb1b505d797a8643a9f7111fa1bf48",
+      "bytes": 3997
+    },
+    "app/js/approvals.js": {
+      "sha256": "77884cc9f5b4309812db35f0ca03038ae4f7e66d6aff62a24caf37adfeca0c71",
+      "bytes": 13036
+    },
+    "app/js/auth.js": {
+      "sha256": "1a37b9366f09eca756dddbff792f21ccb0fc6ab92fa3b10a893a25a5f7856e80",
+      "bytes": 2227
+    },
+    "app/js/build-manifest.json": {
+      "sha256": "d1a2423dbaf0fd5b574717e96ce09fc186faaea0e7543d4ec54b03d0072f8184",
+      "bytes": 3885
+    },
+    "app/js/chart.js": {
+      "sha256": "05a0d48a968a2de34db00d40af304b8445e0f43aba6706557d84a9d536a28fdf",
+      "bytes": 9626
+    },
+    "app/js/completions.js": {
+      "sha256": "de053801851cb73ac00074a107f0692fd4775747e6ca575ce029d8e93bf991de",
+      "bytes": 2731
+    },
+    "app/js/engine.js": {
+      "sha256": "4540f77bb894bdddc6038e5457aecb0da0b2360bba8925fb1b92b8b259b83304",
+      "bytes": 7260
+    },
+    "app/js/experience-replay.js": {
+      "sha256": "9076f33260002099a88135cb413d696522441c4365f6f9df241e3f888958863a",
+      "bytes": 2153
+    },
+    "app/js/experience-ui.js": {
+      "sha256": "809ae9ad863e7e919b0765d854ef8a70a7eaa93eda125e61a7c6261085c02a9a",
+      "bytes": 2421
+    },
+    "app/js/fan-images.js": {
+      "sha256": "c2bef31d125621946819d7dc11a9ac653b8ab254c1d2b1739a6eefff5aa4dc7d",
+      "bytes": 1415
+    },
+    "app/js/mypage.js": {
+      "sha256": "0f38607530d5cb1603f6367829ff7eed23f3f347511e326b4934f824e6796062",
+      "bytes": 8574
+    },
+    "app/js/notifications.js": {
+      "sha256": "d0ffe05c7a5aebbcb799527ca95df8dece2e5925ac0b2be12c68cd41a2bd9633",
+      "bytes": 8861
+    },
+    "app/js/overview-design.js": {
+      "sha256": "f7d1a8fd337bfe9658435c5cb358103198167a3ea8ab84eb4c4cf82b2e053a58",
+      "bytes": 8498
+    },
+    "app/js/playback.js": {
+      "sha256": "347ba11c496f41d0b31575fd4e8646de492506a50d38c22ddeaa45ba578dd7b5",
+      "bytes": 2743
+    },
+    "app/js/report-preview.js": {
+      "sha256": "aa9fb141c5a73d6d175277de0e229a7bacb7fbc13f8d7ec7d4c8210bf49e82da",
+      "bytes": 6005
+    },
+    "app/js/store.js": {
+      "sha256": "21daa079205987bd3adbb39c2a27919ab60a840b2c562b268df0bf60e20741b2",
+      "bytes": 5334
+    },
+    "app/manifest.webmanifest": {
+      "sha256": "97565c99d0b51851c32efca02cbe082b4584d41fe614451d934ba85143a83f42",
+      "bytes": 417
+    },
+    "app/mysql_store.py": {
+      "sha256": "e473328f1935fc0d0b809a2ac57ad96ff569ed95c5e0c351de7bdfbc6b0fa7f7",
+      "bytes": 23111
+    },
+    "app/notifications.py": {
+      "sha256": "4d4d22617675367775276209b202f95b494157792639ea0fa321d45afd0787f9",
+      "bytes": 24564
+    },
+    "app/origin_policy.py": {
+      "sha256": "aab4be7e79b813f339db84671f73644941b5188a6c31c921783c3b2fbb2ac665",
+      "bytes": 1726
+    },
+    "app/requirements.txt": {
+      "sha256": "57c74803b6a965d0d5fda8576734ffa171b9dabc3cffaf0f159d6f76a0228043",
+      "bytes": 56
+    },
+    "app/roles.py": {
+      "sha256": "bd7313849ca8a4cd9255f6b2b0fc53b616da290737b5917da10bf726edd20bb0",
+      "bytes": 3939
+    },
+    "app/server.py": {
+      "sha256": "3bd41c0d7c29adb4a66f157fc1e9b4207cdbefab60e98ac68ed5c0f249510f7a",
+      "bytes": 22543
+    },
+    "app/static_delivery.py": {
+      "sha256": "c1d04aa365a2d196d0695316cb7f67824f12d76a5712c49860e0b8158668340c",
+      "bytes": 5695
+    },
+    "app/sw.js": {
+      "sha256": "30e03faa2ce692da5b071cf94e1dbbce6306e78e4067a08665f78e0fdf419bbf",
+      "bytes": 1241
+    },
+    "app/tests/alarm-reporter.test.mjs": {
+      "sha256": "06f305c0fe703d9c76abd7cdaef7afa4996ddcf8f7feabb2c1a38e1bc5fea817",
+      "bytes": 2644
+    },
+    "app/tests/android-push-flow.test.mjs": {
+      "sha256": "e66daf7e8e3224c62237125ada04c6a9ea4047354a4f649bdead26d0c01ae328",
+      "bytes": 3791
+    },
+    "app/tests/approval-inbox.test.mjs": {
+      "sha256": "071b6bafc0cfc20372ff2a6136e38ca203ae037fd7fd0806632ff3da48c9b795",
+      "bytes": 6188
+    },
+    "app/tests/approval-ui.test.mjs": {
+      "sha256": "6e1a6e01716b39e0761c7cf1b9032467bf83ef5908269ffa103e9ec9e354b65a",
+      "bytes": 10756
+    },
+    "app/tests/completion-store.test.mjs": {
+      "sha256": "137b8138dcf630db2152653959e7fdd4ae61854fc2527c018bd9f904d761e9f7",
+      "bytes": 2818
+    },
+    "app/tests/completion-ui.test.mjs": {
+      "sha256": "6baf018f7fcabe5e6cfc7055683903aa858fc0e082362a38d4f4618532a3f7be",
+      "bytes": 4963
+    },
+    "app/tests/experience-chart.test.mjs": {
+      "sha256": "90acf9cec855073e0ba9e09a7dfc4067236a35c1c72f4d68407cb52b55819c67",
+      "bytes": 1085
+    },
+    "app/tests/experience-replay.test.mjs": {
+      "sha256": "2567585ea009e587c23658a91fab4a42fd7eb168e38a07bc4cd5eb304e8b1260",
+      "bytes": 3341
+    },
+    "app/tests/inspection-report.test.mjs": {
+      "sha256": "0a57bab3f791759dac50a033cbada8603f773b9e88777c08b2b81916954dc5b4",
+      "bytes": 5576
+    },
+    "app/tests/overview-comparison.test.mjs": {
+      "sha256": "724a456bf3677d70b1e683ac85c41bfa1429ed70d23617e33f4b6e92e16a7ecf",
+      "bytes": 3177
+    },
+    "app/tests/playback.test.mjs": {
+      "sha256": "2145a3f33ec5187019b272b8bc6030b497bd4f3cb41696a9774bc7b20ca28c41",
+      "bytes": 4081
+    },
+    "app/tests/pwa-worker.test.mjs": {
+      "sha256": "7a7b5c587329b280b97ec4884ef513678bc68ffb07d45155db6697d8d3c89e46",
+      "bytes": 3090
+    },
+    "app/tests/report-preview.test.mjs": {
+      "sha256": "885a060452e155d8e875a0c7b8f6da013bb6217f056436d1af1cf66435dfea13",
+      "bytes": 3203
+    },
+    "app/tests/test_approval_notifications.py": {
+      "sha256": "355dc957d6b0d986301657434c7818bb3288bde278cf62ca1bb4ea08067100fb",
+      "bytes": 2076
+    },
+    "app/tests/test_bell_inbox.py": {
+      "sha256": "9f6e580814f63ebb192932e320e4962d3978512c5ad8a2eac295912b381a14d3",
+      "bytes": 10574
+    },
+    "app/tests/test_completion_approvals.py": {
+      "sha256": "5d7a2133a0ea5dae97ec151feca708ff0a6e31f4b91fef0f09bdfe9e1afe7777",
+      "bytes": 16425
+    },
+    "app/tests/test_deferred_reports.py": {
+      "sha256": "19f75122cd646405af0444ba77027ad8b902d63ffc44e952657b5852df88e5fe",
+      "bytes": 16514
+    },
+    "app/tests/test_experience.py": {
+      "sha256": "8b8cfd97e97d74ca229de895ab7e9af878c64125cac60f5b46bdaa46353521f5",
+      "bytes": 5072
+    },
+    "app/tests/test_experience_http.py": {
+      "sha256": "0816d3043edc2e643b16fd541ea46ceebbded4df013a6a464a2fa954d4dd087f",
+      "bytes": 4590
+    },
+    "app/tests/test_mysql_login.py": {
+      "sha256": "8e93686df7436caa2bf50824c821f35e74293b7b5d772303caef0c0f908365ba",
+      "bytes": 16633
+    },
+    "app/tests/test_notification_protocol.py": {
+      "sha256": "5f361bd848529ea7d7dc32c7fd10c6a4140d874c518f5577a3f097e8a291029a",
+      "bytes": 2763
+    },
+    "app/tests/test_performance_regressions.py": {
+      "sha256": "2afde9656ca552b1cdfd1cf2793461db52bb3388603bf93e25a6faf26fe4a458",
+      "bytes": 4878
+    },
+    "app/tests/test_playback_bridge.py": {
+      "sha256": "62d448d5c197c935bab8cb2348931c5c3777999f934441832a3bc7ef313197d5",
+      "bytes": 4338
+    },
+    "app/tests/test_read_performance.py": {
+      "sha256": "d966dd4aa02d018089d4e6ad99f9b7003d3a64d86621f12e110a913eb58a7255",
+      "bytes": 3824
+    },
+    "app/tests/test_refresh_delivery.py": {
+      "sha256": "129f0eaa6665e64a336f3a225def650b4c81c014d5eda58e60b0f086a62258f5",
+      "bytes": 3187
+    },
+    "app/tests/test_report_review_metadata.py": {
+      "sha256": "77bf42c10e5bca6e4337e80dc2ab596fca156b5ffbd950012d1b936a04a66079",
+      "bytes": 2205
+    },
+    "app/tests/test_schedule_approvals.py": {
+      "sha256": "c8dd137faa4d9bbaab8bd688a2b09f7360ce61383ace3e934461cd18e77b9881",
+      "bytes": 15344
+    },
+    "app/tests/test_static_delivery.py": {
+      "sha256": "588fea3778b4d56d0613f0c502fc7f6fba65ae98f6e8f19c755db57f4d20e03d",
+      "bytes": 4882
+    },
+    "app/tests/test_subscription_ownership.py": {
+      "sha256": "ca1e29656679d8c97011a0366d3dad6bf92b58a94d39b60626a8743125f8fbcd",
+      "bytes": 7812
+    },
+    "app/tests/test_supervisor_submission.py": {
+      "sha256": "2eec8d1ab02f4230ccba7e040f91d0e7ecf89d50363b5c00c27f9a00102e43ef",
+      "bytes": 10988
+    },
+    "app/tests/test_team_replay.py": {
+      "sha256": "e6212d8e81337b523d17f7a355a120db4bd23fd8d3c44dcb29dd9fed4c13bc57",
+      "bytes": 7172
+    },
+    "app/tools/build_db.py": {
+      "sha256": "7a4b00191da7d33ba71f61008589014561743fd834a9de92b6ea9e55d2a349a4",
+      "bytes": 19861
+    },
+    "app/tools/manage_users.py": {
+      "sha256": "b4393061cb337411f17c27aa9f97e09718f07d342315ad18bc4bd7cec37cc003",
+      "bytes": 1899
+    },
+    "app/tools/web-build/build.mjs": {
+      "sha256": "929d5736cf82dfd0c826e68bfcfec8f113f14ad6d779fee4ff224bb65c3149a2",
+      "bytes": 3765
+    },
+    "app/tools/web-build/package.json": {
+      "sha256": "c443ca6ffcf52c7c35f40ac597387a80c4dcc3833eae827639982d9fe43c1090",
+      "bytes": 184
+    },
+    "app/tools/web-build/pnpm-lock.yaml": {
+      "sha256": "fa329dabc9e24281e10402bdebdc391218618c3092e132afde7e4619832b0119",
+      "bytes": 8624
+    },
+    "app/tools/web-build/README.txt": {
+      "sha256": "03046baef8195f763d1fb87bcaff34c298e29c32c155ee8ec60891d8fcac462e",
+      "bytes": 2212
+    },
+    "app/tools/web-build/styles.json": {
+      "sha256": "a48344c0218815a26097a07511fad6901149392b77aa78d722c10f87f3f32c48",
+      "bytes": 384
+    },
+    "db/01_schema.sql": {
+      "sha256": "2595f5ec46f325c32cda619e65d7c777da9dcf9f85e370f6de261693df77093a",
+      "bytes": 12224
+    },
+    "db/02_mock_seed.sql": {
+      "sha256": "d9a25b2adce45fbde2bb35185e19ea5bdcd771c05f168c2b1ce08c95979eff1d",
+      "bytes": 31514
+    },
+    "db/mysql-cli.sh": {
+      "sha256": "02f23b735e75f03d5e5df50c40bee43d74baa715a12b6b020b95584f1e128a54",
+      "bytes": 510
+    },
+    "db/provision-app.sh": {
+      "sha256": "b1137d73cbf9f9f077bf14d7f184151f2dfe391f6431a952d441201facca9ce2",
+      "bytes": 720
+    },
+    "migrations/bell_inbox_additive.sql": {
+      "sha256": "5c3fd1e9523fc60d681e398e47a040d08c99e1498c297a0def53a445464a04d4",
+      "bytes": 712
+    },
+    "migrations/calendar_activity_additive.sql": {
+      "sha256": "a824abe0952d67a31968ff63df046fb52cb209f82d5997a94cb8276f2c4bf4cf",
+      "bytes": 611
+    },
+    "migrations/completion_approvals_additive.sql": {
+      "sha256": "b66cfde08ef1d89e02ae1434151760d3d814fa50bdea3a02d1d70e530f972f36",
+      "bytes": 1926
+    },
+    "migrations/experience_additive.sql": {
+      "sha256": "33bb38bb9118571d39049fadcaf2e731a4dc76896d22cd6e4417d04080dedff8",
+      "bytes": 4902
+    },
+    "migrations/login_additive.sql": {
+      "sha256": "5c5169abf083ded9852b889985d367a2d2a8ec406c95e38afb1f7444f1107cf2",
+      "bytes": 2121
+    },
+    "migrations/report_deferred_schedule_additive.sql": {
+      "sha256": "71c98454c1bab2d12e1ae3e983b533d09a4824509cb951a5237455f9f1397cd3",
+      "bytes": 1769
+    },
+    "migrations/role_notifications_additive.sql": {
+      "sha256": "dd8540310497051dd440310011f70c1bb9a02fb8e3b6846855354f51cae649e6",
+      "bytes": 2686
+    },
+    "migrations/schedule_approvals_additive.sql": {
+      "sha256": "346b748ae51a2baf8b8b9b01d5aa2ca5444a22c6e0a07c98924a44e2149553ec",
+      "bytes": 2311
+    }
+  }
+}

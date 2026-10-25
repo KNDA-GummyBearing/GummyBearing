@@ -1,0 +1,54 @@
+# Local team review only. No existing AWS/preview volumes or external mail/push.
+name: gb-final-pr-review
+services:
+  mysql:
+    image: mysql:8.4.11
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+      MYSQL_DATABASE: gummybearing_v5_draft
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_as_cs", "--default-time-zone=+09:00", "--innodb-buffer-pool-size=134217728", "--performance-schema=OFF"]
+    volumes:
+      - review-db:/var/lib/mysql
+      - ./db/mysql-cli.sh:/tools/mysql-cli.sh:ro
+      - ./db/provision-app.sh:/tools/provision-app.sh:ro
+    secrets: [mysql_root_password, mysql_app_password]
+    healthcheck:
+      test: [CMD, sh, /tools/mysql-cli.sh, --execute=SELECT 1]
+      interval: 3s
+      timeout: 5s
+      start_period: 15s
+      retries: 40
+  web:
+    build: ./app
+    image: gb-system:pr-review
+    environment:
+      GUMMY_HOST: 0.0.0.0
+      GUMMY_STORAGE: mysql
+      MYSQL_HOST: mysql
+      MYSQL_DATABASE: gummybearing_v5_draft
+      MYSQL_USER: gummy_app
+      MYSQL_PASSWORD_FILE: /run/secrets/mysql_app_password
+      GB_PUBLIC_ORIGIN: http://127.0.0.1:18088
+      GB_STATE_DIR: /login-state
+      GB_DEMO_ROLE_SELECTION: "1"
+      GB_EMAIL_SEND: "0"
+      GB_PUSH_SEND: "0"
+    ports: ["127.0.0.1:18088:8000"]
+    volumes: ["review-state:/login-state"]
+    secrets: [mysql_app_password]
+    depends_on:
+      mysql:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+secrets:
+  mysql_root_password:
+    file: ./.runtime/local-root.txt
+  mysql_app_password:
+    file: ./.runtime/local-app.txt
+volumes:
+  review-db:
+  review-state:

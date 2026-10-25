@@ -1,0 +1,130 @@
+{
+  "verified_at_utc": "2026-10-25T02:36:01.539703+00:00",
+  "release": "gummybearing-fan:v18-report-preview-20261025",
+  "release_file_count": 205,
+  "unchanged_selected_release_files": 171,
+  "omitted_unused_release_files": [
+    "css/site.9ed1350f843b74de.css",
+    "js/app.91376b8d15557b24.js",
+    "assets/brand/app-icon-navy-v2.png",
+    "assets/brand/app-icon-user-v3.png",
+    "assets/brand/app-navy.png",
+    "assets/brand/app-silver.png",
+    "assets/brand/apple-touch-icon-navy-v2.png",
+    "assets/brand/pwa-192.png",
+    "assets/brand/pwa-512.png",
+    "assets/brand/pwa-navy-v2-192.png",
+    "assets/brand/pwa-navy-v2-512.png",
+    "assets/brand/signature-horizontal-navy.png",
+    "assets/brand/signature-horizontal-silver.png",
+    "assets/brand/signature-vertical-navy.png",
+    "assets/brand/signature-vertical-silver.png",
+    "assets/img/fan01_dark.png",
+    "assets/img/fan01_light.png",
+    "assets/img/fan02_dark.png",
+    "assets/img/fan02_light.png",
+    "assets/optimized/brand__app-icon-navy-v2.png.webp",
+    "assets/optimized/brand__app-icon-user-v3.png.webp",
+    "assets/optimized/brand__app-navy.png.webp",
+    "assets/optimized/brand__app-silver.png.webp",
+    "assets/optimized/brand__pwa-512.png.webp",
+    "assets/optimized/brand__pwa-navy-v2-512.png.webp",
+    "assets/optimized/brand__signature-horizontal-navy.png.webp",
+    "assets/optimized/brand__signature-horizontal-silver.png.webp",
+    "assets/optimized/brand__signature-vertical-navy.png.webp",
+    "assets/optimized/brand__signature-vertical-silver.png.webp",
+    "assets/optimized/img__fan01_dark.png.webp",
+    "assets/optimized/img__fan01_light.png.webp",
+    "assets/optimized/img__fan02_dark.png.webp",
+    "assets/optimized/img__fan02_light.png.webp"
+  ],
+  "derived_files": [
+    {
+      "path": "assets/optimized/manifest.json",
+      "change": "remove entries for excluded unused images; retained entries unchanged"
+    }
+  ],
+  "kept_code_and_assets_match_release": true,
+  "latest_changed_files": [
+    "approvals.py",
+    "server.py",
+    "index.html",
+    "css/report-preview.css",
+    "css/site.48fb0c6f4ba99b1a.css",
+    "js/app.ffbb11e49a650f83.js",
+    "js/app.js",
+    "js/approvals.js",
+    "js/build-manifest.json",
+    "js/mypage.js",
+    "js/report-preview.js"
+  ],
+  "deployment_receipt_source": "deployment chat activate-result.txt; not an independent production DB recount",
+  "deployment_receipt": {
+    "finished_at": "2026-10-24T20:23:55.225513+00:00",
+    "verified_files": 205,
+    "database_tables": 30,
+    "database_mutations": 0,
+    "vapid_preserved": true,
+    "environment_preserved": true,
+    "notification_test_sends": 0
+  },
+  "production_get_only": true,
+  "external_notification_sends": 0,
+  "static_hashes": {
+    "/index.html": "matched",
+    "/experience/index.html": "matched",
+    "/css/report-preview.css": "matched",
+    "/experience/css/report-preview.css": "matched",
+    "/css/site.48fb0c6f4ba99b1a.css": "matched",
+    "/experience/css/site.48fb0c6f4ba99b1a.css": "matched",
+    "/js/app.ffbb11e49a650f83.js": "matched",
+    "/experience/js/app.ffbb11e49a650f83.js": "matched",
+    "/js/app.js": "matched",
+    "/experience/js/app.js": "matched",
+    "/js/approvals.js": "matched",
+    "/experience/js/approvals.js": "matched",
+    "/js/build-manifest.json": "matched",
+    "/experience/js/build-manifest.json": "matched",
+    "/js/mypage.js": "matched",
+    "/experience/js/mypage.js": "matched",
+    "/js/report-preview.js": "matched",
+    "/experience/js/report-preview.js": "matched"
+  },
+  "production_health": {
+    "ok": true,
+    "storage": "mysql"
+  },
+  "local_smoke": {
+    "origin": "http://127.0.0.1:18088",
+    "isolated_db": true,
+    "roles": [
+      {
+        "scope": "all",
+        "equipment_count": 6,
+        "maintenance_api_ok": true,
+        "inspection_count": 4,
+        "report_metadata_present": true
+      },
+      {
+        "scope": "sinter",
+        "equipment_count": 3,
+        "maintenance_api_ok": true,
+        "inspection_count": 3,
+        "report_metadata_present": true
+      },
+      {
+        "scope": "steel",
+        "equipment_count": 3,
+        "maintenance_api_ok": true,
+        "inspection_count": 1,
+        "report_metadata_present": true
+      }
+    ],
+    "visitor_equipment_count": 6,
+    "visitor_team_session_isolated": true,
+    "excluded_legacy_files_not_served": true,
+    "asset_head_checks": 115,
+    "webp_negotiation_checks": 24
+  },
+  "passed": true
+}

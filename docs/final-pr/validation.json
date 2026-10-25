@@ -1,0 +1,73 @@
+{
+  "scope": "static checks + existing local regression tests; no AWS, DB or browser UI test",
+  "date": "2026-10-25",
+  "errors": [],
+  "python_test_environment": "isolated Docker image",
+  "source_manifest_sha256": "30a93b0bfe5f241e508f0431b5341badb49c4a150992b5ea4b90fd19d5ea44eb",
+  "selected_files": 250,
+  "unique_files": 250,
+  "git_byte_preservation_paths": 249,
+  "selected_bytes": 100929000,
+  "largest_file": {
+    "path": "app/gb-system/app/assets/img/map_dark.png",
+    "bytes": 6433992
+  },
+  "python_syntax_files": 34,
+  "js_syntax_files": 34,
+  "docker_copy_inputs": 23,
+  "html_asset_references": 10,
+  "runtime_asset_references": 90,
+  "optimized_manifest_entries": 24,
+  "font_subset_references": 64,
+  "bundle_hash_checks": 39,
+  "high_confidence_secret_paths": [],
+  "static_delivery_tests": {
+    "passed": true,
+    "output": "test_compression_opt_out_is_respected (test_static_delivery.DeliveryTests.test_compression_opt_out_is_respected) ... ok\ntest_csv_cache_is_scoped_and_invalidates_when_dataset_changes (test_static_delivery.DeliveryTests.test_csv_cache_is_scoped_and_invalidates_when_dataset_changes) ... ok\ntest_etag_revalidation_and_file_update (test_static_delivery.DeliveryTests.test_etag_revalidation_and_file_update) ... ok\ntest_gzip_and_head_preserve_bytes_and_content_length (test_static_delivery.DeliveryTests.test_gzip_and_head_preserve_bytes_and_content_length) ... ok\ntest_webp_requires_support_and_matching_original (test_static_delivery.DeliveryTests.test_webp_requires_support_and_matching_original) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.036s\n\nOK\n"
+  },
+  "python_regression_tests": [
+    {
+      "suite": "test_report_review_metadata",
+      "passed": true,
+      "totals": [
+        "Ran 1 test in 0.001s",
+        "OK"
+      ]
+    },
+    {
+      "suite": "test_refresh_delivery",
+      "passed": true,
+      "totals": [
+        "Ran 3 tests in 0.042s",
+        "OK"
+      ]
+    },
+    {
+      "suite": "test_performance_regressions",
+      "passed": true,
+      "totals": [
+        "Ran 6 tests in 0.206s",
+        "OK"
+      ]
+    },
+    {
+      "suite": "test_read_performance",
+      "passed": true,
+      "totals": [
+        "Ran 4 tests in 0.007s",
+        "OK (skipped=1)"
+      ]
+    }
+  ],
+  "javascript_tests": {
+    "files": 13,
+    "passed": true,
+    "totals": [
+      "# tests 74",
+      "# pass 74",
+      "# fail 0",
+      "# skipped 0"
+    ]
+  },
+  "passed": true
+}
