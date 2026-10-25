@@ -1,27 +1,71 @@
+<div align="center">
+
 # 🧸 GummyBearing
 
 ### 대형 회전기 베어링 열화 추적과 교체 시점 판단
 
 포스코 K-뉴딜 아카데미 「설비 고장을 예측하는 AI 데이터 분석」 통합 프로젝트
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=flat-square&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![AWS EC2](https://img.shields.io/badge/AWS-EC2-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
+<br>
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) 
+<br>
+
+[프로젝트 소개](#-1-프로젝트-소개) · [핵심 결과](#-2-핵심-결과--대표-운영-규칙) · [진행 흐름](#-3-프로젝트-진행-흐름) · [웹 서비스](#-6-웹-서비스-프로토타입) · [최종 산출물](#-9-최종-산출물)
+
+</div>
+<br>
 
 ## 1. 프로젝트 소개
 
-베어링 진동 데이터에서 초기 정상 구간 대비 이탈을 추적해 경보 시점(P)을 정하고,
-어떤 특징·축에서 몇 회 초과했는지를 근거로 점검 및 교체 검토 시점을 제시하는 프로젝트입니다.
+> 베어링 진동 데이터에서 **초기 정상 구간 대비 이탈**을 추적해 경보 시점(P)을 정하고,
+> **어떤 특징·축에서 몇 회 초과했는지**를 근거로 점검 및 교체 검토 시점을 제시합니다.
 
 **분석 데이터: XJTU-SY Bearing Dataset**
 
 * 정상 상태부터 고장까지 진행한 베어링 가속 수명 시험 데이터
 * 베어링별 수평·수직 진동 신호에서 RMS·첨도·Peak 특징을 추출해 운영 규칙 비교와 선정에 사용
 
-**프로젝트 목표**
+<div align="center">
+  <img src="figures/readme/Bearing1_5_feature_trends.png" width="80%" alt="Bearing1_5 특징 추이">
+  <br>
+  <sub>정상 구간에서 고장 직전까지 진동 특징이 변하는 모습 (XJTU-SY Bearing1_5)</sub>
+</div>
 
-* 최소 목표: 열화 시작 판정 규칙 수립 및 교체 권고 시점 제시
-* 최대 목표: 교체 알림 프로토타입 구현 및 현장 적용 방안 제안
+<br>
 
 ## 2. 핵심 결과 — 대표 운영 규칙
 
-**N=20 · 연속 4회 · 고정 복합 B 방식 2/3**
+<div align="center">
+
+### N=20 · 연속 4회 · 고정 복합 B 방식 2/3
+
+</div>
+
+```mermaid
+flowchart LR
+    A["초기 20회 측정<br/>(기준 구간)"] --> B["특징별 상한<br/>평균 + 3σ"]
+    B --> C["21번째부터 감시<br/>새 측정값 입력"]
+    C --> D["축별로 RMS·첨도·Peak<br/>4회 연속 초과 확인"]
+    D --> E{"같은 축에서<br/>2개 이상 충족?"}
+    E -- 아니오 --> C
+    E -- 예 --> F["🚨 설비 경보 t_P<br/>먼저 충족한 축 기준"]
+
+    classDef base fill:#EAF4F9,stroke:#55A9CD,color:#1F2328
+    classDef check fill:#FFFFFF,stroke:#005B82,stroke-width:2px,color:#1F2328
+    classDef alarm fill:#005B82,stroke:#005B82,color:#FFFFFF
+    class A,B,C,D base
+    class E check
+    class F alarm
+```
 
 1. 초기 20회 측정으로 특징별 상한(평균 + 3σ)을 정합니다.
 2. 같은 축의 RMS·첨도·Peak 중 **2개 이상**이 각각 상한을 **4회 연속** 초과하면 그 시점을 P로 잡습니다.
@@ -34,25 +78,24 @@ N20·K4 조건에서 초기 구간 검증을 통과한 XJTU-SY 베어링 6개를
 | --- | :---: | :---: | :---: |
 | 고정 RMS | 0/6 | 19분 | 48.26% |
 | 고정 B 1/3 | 0/6 | 19분 | 52.00% |
-| **고정 B 2/3 (대표)** | **0/6** | **14분** | **78.63%** |
+| ⭐ **고정 B 2/3 (대표)** | **0/6** | **14분** | **78.63%** |
 | 고정 B 3/3 | 2/6 | 미산출 | 미산출 |
 | 원본 마할라노비스 | 0/6 | 17분 | 84.08% |
 | 증가분 마할라노비스 | 0/6 | 17분 | 41.57% |
 | Isolation Forest 직접 3σ | 0/6 | 14분 | 23.42% |
 
-**해석 시 주의**
+> [!NOTE]
+> * 방법마다 이상 기준이 달라 이 표는 기술통계 비교이며 정확도 순위가 아닙니다.
+> * 선행시간은 `실험 종료 − P`이며 실제 남은 수명이나 고장 예측 시간이 아닙니다.
+> * 원본 마할라노비스는 두 수치가 더 높지만 감소 방향·특징 조합 변화까지 포함하므로 비교군으로 남겼습니다.
+> * B 2/3은 최적 모델의 입증이 아니라, 여러 특징의 반복 초과를 현장 판단 근거로 설명할 수 있다는 운영 목적에 맞춘 선택입니다.
 
-* 방법마다 이상 기준이 달라 이 표는 기술통계 비교이며 정확도 순위가 아닙니다.
-* 선행시간은 `실험 종료 − P`이며 실제 남은 수명이나 고장 예측 시간이 아닙니다.
-* 원본 마할라노비스는 두 수치가 더 높지만 감소 방향·특징 조합 변화까지 포함하므로 비교군으로 남겼습니다.
-* B 2/3은 최적 모델의 입증이 아니라, 여러 특징의 반복 초과를 현장 판단 근거로 설명할 수 있다는 운영 목적에 맞춘 선택입니다.
-
-결과 파일과 지표 정의는 [분석 결과 상세](#분석-결과-상세)를 참고해주세요. 
+결과 파일과 지표 정의는 아래 [분석 결과 상세](#분석-결과-상세)를 참고해주세요.
 
 ### 분석 결과 상세
 
 <details>
-<summary><b>펼쳐서 보기</b> — 생성 파일 · 결과 CSV · CSV 읽는 법 · 주요 지표 · IF 설정 · 계산상 주의</summary>
+<summary><b>펼쳐서 보기</b> — 생성 파일 · 결과 CSV · CSV 해석 · 주요 지표 · IF 설정 · 계산상 주의</summary>
 
 `05_xjtu_final_model_comparison` 노트북의 결과 파일과 읽는 법입니다.
 
@@ -94,7 +137,6 @@ N20·K4 조건에서 초기 구간 검증을 통과한 XJTU-SY 베어링 6개를
 * 행 종류에 해당하지 않는 열은 빈값입니다. 빈값을 0이나 정상으로 해석하면 안 됩니다.
 * 여러 파일의 집계·개별 행을 합산하면 중복 집계되므로 필요한 `row_type`부터 골라 사용합니다.
 
-
 #### 주요 지표
 
 | 지표 | 의미 |
@@ -132,9 +174,31 @@ IF는 최초 경보축·축별 P·축별 지속률을 산출하지 않고 빈값
 
 </details>
 
+<br>
+
 ## 3. 프로젝트 진행 흐름
 
-데이터 이해 → 문제 정의 → 전처리 및 EDA → 특징 추출 및 시계열 분석 → 이상탐지 및 모델링 → 모델 평가 → 교체 권고 → 현장 적용
+```mermaid
+flowchart TB
+    subgraph S1["데이터 분석"]
+        direction LR
+        A["문제 정의"] --> B["데이터 이해<br/>XJTU-SY 선정"] --> C["전처리 · EDA<br/>특징 추출"] --> D["시계열 분석<br/>기준 구간 선별"] --> E["모델링<br/>11개 조건 비교"] --> F["평가<br/>대표 규칙 선정"]
+    end
+    subgraph S2["서비스 적용"]
+        direction LR
+        G["웹서비스<br/>GB system"] --> H["모바일 알림<br/>Web Push"] --> I["현장 점검 ·<br/>정비 기록"]
+    end
+    S1 ==> S2
+
+    classDef step fill:#EAF4F9,stroke:#55A9CD,color:#1F2328
+    classDef web fill:#005B82,stroke:#005B82,color:#FFFFFF
+    class A,B,C,D,E,F step
+    class G,H,I web
+    style S1 fill:#FFFFFF,stroke:#C9CED4
+    style S2 fill:#FFFFFF,stroke:#C9CED4
+```
+
+### 데이터 분석
 
 | Notebook | 내용 |
 | --- | --- |
@@ -145,10 +209,29 @@ IF는 최초 경보축·축별 P·축별 지속률을 산출하지 않고 빈값
 | `04_xjtu_sy_eda` | XJTU-SY 분포·시계열·특징 관계 EDA |
 | `05_xjtu_final_model_comparison` | 운영 규칙·모델 비교 및 대표 규칙 선정 |
 
+### 서비스 적용 · GB system
+
+분석에서 선정한 대표 경보 규칙(N=20, 고정 복합 B 2/3, 연속 4회)을 가상 배기가스 팬 6대에 연결해, 상태 확인부터 현장 점검·정비 기록까지 이어지는 웹서비스로 구현했습니다.
+
+| 구분 | 내용 |
+| --- | --- |
+| 상태 확인 | 공정별 정상·주의·경보 현황, 설비 목록, 설비별 RMS·Peak·첨도 그래프와 경보 근거 |
+| 경보 판정 | XJTU-SY 특징 CSV를 실시간처럼 재생하며 브라우저에서 대표 규칙으로 판정 |
+| 모바일 알림 | 최초 경보와 승인 요청을 Web Push(PWA)·이메일로 전달, 같은 경보는 한 번만 발송 |
+| 점검·정비 | 현장 점검 보고서 작성 → 설비 팀장 승인 → 정비 캘린더·이력 관리 |
+| 구성 | AWS EC2 · Docker Compose · Caddy(HTTPS) · Python 웹서버 · MySQL 8.4 |
+
+> 서비스의 설비 정보와 초기 점검 기록은 시나리오용 예시이며, 진동 데이터만 실제 XJTU-SY 실험 자료입니다.
+<br>
+
 ## 4. 개발 환경 및 실행
 
-* Python 3.14 / Conda / Jupyter Notebook / VS Code
-* GitHub Organization을 통한 협업
+| 구분 | 사용 도구 |
+| --- | --- |
+| 언어·환경 | Python 3.14 · Conda · Jupyter Notebook · VS Code |
+| 분석 | pandas · NumPy · SciPy · scikit-learn · Matplotlib |
+| 웹 서비스 | Python 서버 · MySQL · Docker Compose · AWS EC2 |
+| 협업 | GitHub Organization |
 
 **가상환경 생성 및 활성화**
 
@@ -159,7 +242,7 @@ conda activate GummyBearing
 
 VS Code에서 Python 인터프리터와 Jupyter 커널을 `GummyBearing`으로 선택합니다.
 
-
+<br>
 
 ## 5. 프로젝트 구조
 
@@ -167,45 +250,113 @@ VS Code에서 Python 인터프리터와 Jupyter 커널을 `GummyBearing`으로 �
 GummyBearing/
 ├── README.md
 ├── Contributing.md
-├── .gitignore
 ├── environment.yml
-├── DATA/           # 원본·특징 데이터 (Git 제외)
-├── notebooks/      # 분석 Notebook
-├── src/            # 전처리·특징 추출 함수
-├── results/        # 분석 결과 CSV (eda, xjtu_operating_rule)
-├── figures/        # 분석 그래프 (eda, xjtu_operating_rule)
-├── reports/        # 보고서 및 발표자료
-├── app/            # 프로토타입
-└── tests/          # 테스트 코드
+├── .gitignore · .gitattributes
+├── DATA/                       # 원본·특징 데이터 (Git 제외)
+├── notebooks/                  # 분석 Notebook 00~05
+├── src/                        # 전처리·특징 추출 함수 (IMS·CWRU·XJTU-SY 공통)
+├── results/
+│   ├── eda/                    # 개체·특징별 기술통계 (XJTU_SY_stats.csv)
+│   └── xjtu_operating_rule/    # 모델 비교 결과 CSV 01~10
+├── figures/
+│   ├── eda/                    # 분포·시계열·특징 관계 그래프
+│   └── xjtu_operating_rule/    # 기준 구간·모델 비교 그래프
+├── app/
+│   └── gb-system/              # GB system 웹서비스 (Python 서버·웹앱·MySQL·Docker)
+├── demos/                      # 대시보드·ERP 연계 HTML 데모
+├── docs/
+│   └── final-pr/               # 최종 PR 설명·배포 검증 기록
+├── tools/                      # 최종 PR 준비·검증 스크립트
+├── tests/                      # 모델 비교 결과 검증 테스트
+└── reports/                    # 문제정의서 · 결과보고서 · 발표자료
 ```
 
 원본 데이터는 각자 로컬 `DATA/` 폴더에 저장하며 GitHub에 업로드하지 않습니다.
 
+<br>
+
 ## 6. 웹 서비스 프로토타입
 
-대표 운영 규칙을 적용한 배기가스 팬 설비 관리 웹 서비스입니다.
+대표 운영 규칙을 적용한 **배기가스 팬 설비 관리 웹 서비스**입니다.
 "어떤 팬을 먼저, 왜 확인해야 하는지"를 보여주고 현장 점검부터 정비 이력까지 한 흐름으로 관리합니다.
 
-* 제철소·공정 배치도 위 설비 상태(정상·주의·경보)와 실시간 경보 알림
-* 설비별 진동 그래프와 판단 근거(초과한 특징·축·횟수)
-* 점검·정비 기록, 캘린더, 이력 관리, 로그인·마이페이지
-* Python 서버 + MySQL, Docker Compose 기반 AWS EC2 배포
+<table>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="figures/readme/web_home.jpg" alt="포항제철소 설비 통합 대시보드"><br>
+      <sub><b>메인 화면</b> · 제철소 배치도와 공정별 정상·주의·경보 현황</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="figures/readme/web_equipment.jpg" alt="공정별 기계설비 현황"><br>
+      <sub><b>공정별 기계설비 현황</b> · 상태와 판단 근거를 한눈에</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="figures/readme/web_maintenance.jpg" alt="점검·정비 이력"><br>
+      <sub><b>점검·정비 이력</b> · 다가오는 일정과 기록 통합</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="figures/readme/web_calendar.jpg" alt="정비 캘린더"><br>
+      <sub><b>정비 캘린더</b> · 공정별 일정 확인과 추가</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="figures/readme/web_mobile_alarm.jpg" width="38%" alt="모바일 경보 알림">
+      <img src="figures/readme/web_mobile_menu.jpg" width="38%" alt="모바일 메뉴"><br>
+      <sub><b>모바일 화면</b> · 주의·경보 푸시 알림과 메뉴</sub>
+    </td>
+  </tr>
+</table>
 
-진동 데이터는 XJTU-SY 실측값을 가상의 팬 6대에 대입한 시연용이며,
-설비 사양과 점검·정비 이력은 화면 구성을 위한 가상값입니다.
+**주요 기능**
 
-## 7. 협업 규칙
+* 🗺️ 제철소·공정 배치도 위 설비 상태(정상·주의·경보)와 실시간 경보 알림
+* 📈 설비별 진동 그래프와 판단 근거(초과한 특징·축·횟수)
+* 📝 점검·정비 기록, 캘린더, 이력 관리, 로그인·마이페이지
+* ☁️ Python 서버 + MySQL, Docker Compose 기반 AWS EC2 배포
+
+> [!NOTE]
+> 진동 데이터는 XJTU-SY 실측값을 가상의 팬 6대에 대입한 시연용이며,
+> 설비 사양과 점검·정비 이력은 화면 구성을 위한 가상값입니다.
+
+<br>
+
+## 7. 팀원
+
+
+<div align="center">
+
+| <img src="figures/readme/sssssumini.png" width="120" alt="김수민"> |<img src="figures/readme/min-jun-kang.png" width="120" alt="강민준"> |  <img src="figures/readme/onlynew203-cmyk.png" width="120" alt="정온유"> |
+| :---: | :---: | :---: |
+| **김수민** | **강민준** | **정온유** |
+
+</div>
+<br>
+
+## 8. 협업 규칙
 
 브랜치, 커밋, PR 및 파일 관리 규칙은 [Contributing.md](Contributing.md)를 참고해주세요.
 
-## 8. 최종 산출물
+<br>
 
-* 문제정의서 및 데이터 분석 코드
-* 운영 규칙·모델 비교 결과 (`results/`, `figures/`)
-* 열화 판정 및 교체 권고 규칙 (N20 · K4 · 고정 B 2/3)
-* 최종 결과보고서 및 발표자료
-* 설비 관리 웹 서비스 프로토타입
+## 9. 최종 산출물
+
+| 산출물 | 위치 |
+| --- | --- |
+| 📄 문제정의서 | [reports/문제정의서.pdf](reports/문제정의서.pdf) |
+| 📊 최종 결과보고서 | [reports/결과보고서.pdf](reports/결과보고서.pdf) |
+| 🎤 발표자료 | [reports/발표자료.pdf](reports/발표자료.pdf) |
+| 💻 데이터 분석 코드 | [notebooks/](notebooks/) · [src/](src/) |
+| 📈 운영 규칙·모델 비교 결과 | [results/](results/) · [figures/](figures/) |
+| 🚨 열화 판정 및 교체 권고 규칙 | N20 · K4 · 고정 B 2/3 ([핵심 결과](#-2-핵심-결과--대표-운영-규칙)) |
+| 🖥️ 설비 관리 웹 서비스 프로토타입 | [웹 서비스](#-6-웹-서비스-프로토타입) |
+
+<br>
 
 ---
 
-※ 프로젝트 진행에 따라 분석 결과와 세부 내용을 업데이트합니다.
+<div align="center">
+  <sub>🧸 GummyBearing · 포스코 K-뉴딜 아카데미 「설비 고장을 예측하는 AI 데이터 분석」</sub>
+</div>
