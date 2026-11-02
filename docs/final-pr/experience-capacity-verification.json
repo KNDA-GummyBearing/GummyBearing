@@ -1,0 +1,50 @@
+{
+  "release": "gummybearing-fan:v19-experience-capacity-20261026",
+  "deployed_at_utc": "2026-10-26T07:52:08.983028+00:00",
+  "runtime_files_changed": ["experience.py"],
+  "runtime_files_verified": 206,
+  "reason": "Shared-Wi-Fi attendees exceeded a 12-per-hour entry policy; missing proxy-header opt-in also counted visitors under the Caddy peer address.",
+  "limits": {
+    "window_seconds": 3600,
+    "per_ip_before": 12,
+    "per_ip_after": 300,
+    "global_before": 200,
+    "global_after": 1000,
+    "counts": "new visitor creation attempts, not concurrent users"
+  },
+  "proxy_configuration": {
+    "GB_TRUST_PROXY_HEADERS": "1",
+    "web_binding": "127.0.0.1:8081:8000",
+    "caddy_default_forwarded_header_sanitization_verified": true,
+    "actual_public_visitor_not_counted_under_proxy": true,
+    "spoofed_public_forwarded_header_rejected": true
+  },
+  "validation": {
+    "capacity_and_proxy_unit_tests": 9,
+    "passed": true,
+    "environment": "candidate Docker image with no network, read-only root and no DB mounts",
+    "shared_ip_entry_attempts_tested": 150,
+    "per_ip_301st_rejected": true,
+    "global_1001st_rejected": true,
+    "public_smoke": {
+      "start_http": 200,
+      "start_seconds": 0.198,
+      "session_restore_http": 200,
+      "equipment_http": 200,
+      "equipment_count": 6,
+      "maintenance_http": 200,
+      "logout_http": 200,
+      "test_visitor_sessions_created": 1
+    },
+    "concurrent_100_user_load_test_performed": false
+  },
+  "preservation": {
+    "database_backup_created": true,
+    "existing_database_container_and_mounts_retained": true,
+    "database_migrations": [],
+    "deployment_database_mutations": 0,
+    "business_record_writes": 0,
+    "email_and_push_test_sends": 0,
+    "existing_environment_preserved_except_proxy_flag": true
+  }
+}

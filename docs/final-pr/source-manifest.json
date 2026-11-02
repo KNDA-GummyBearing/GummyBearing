@@ -590,8 +590,8 @@
       "bytes": 2408
     },
     "app/experience.py": {
-      "sha256": "829baa8ea56585bf6fdf43e3b09fcc0914c48a776d82ec55d81167f526937c3c",
-      "bytes": 31856
+      "sha256": "1002d28fc53c026a94041e89e118c29fb57433752a0a62c7334bc79bddc0d67d",
+      "bytes": 32223
     },
     "app/experience.webmanifest": {
       "sha256": "a2370876f4b199d7f124aa9900dabfee0e85b047d626b76291c5eac09b8bbc8c",
@@ -788,6 +788,10 @@
     "app/tests/test_experience.py": {
       "sha256": "8b8cfd97e97d74ca229de895ab7e9af878c64125cac60f5b46bdaa46353521f5",
       "bytes": 5072
+    },
+    "app/tests/test_experience_capacity.py": {
+      "sha256": "7a9ad58cd350aef5066090fa4a6d5f12886bedae913d9bd1811bb890d5b2f8f8",
+      "bytes": 5039
     },
     "app/tests/test_experience_http.py": {
       "sha256": "0816d3043edc2e643b16fd541ea46ceebbded4df013a6a464a2fa954d4dd087f",

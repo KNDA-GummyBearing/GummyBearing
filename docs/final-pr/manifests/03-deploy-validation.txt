@@ -20,6 +20,7 @@ app/gb-system/app/tests/test_bell_inbox.py
 app/gb-system/app/tests/test_completion_approvals.py
 app/gb-system/app/tests/test_deferred_reports.py
 app/gb-system/app/tests/test_experience.py
+app/gb-system/app/tests/test_experience_capacity.py
 app/gb-system/app/tests/test_experience_http.py
 app/gb-system/app/tests/test_mysql_login.py
 app/gb-system/app/tests/test_notification_protocol.py
@@ -57,6 +58,7 @@ docs/final-pr/PR-02-server-workflows.md
 docs/final-pr/PR-03-deploy-validation.md
 docs/final-pr/README.md
 docs/final-pr/deployment-verification.json
+docs/final-pr/experience-capacity-verification.json
 docs/final-pr/manifests/01-ui-demos.txt
 docs/final-pr/manifests/02-server-workflows.txt
 docs/final-pr/manifests/03-deploy-validation.txt
