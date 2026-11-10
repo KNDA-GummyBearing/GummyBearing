@@ -20,6 +20,11 @@ import notifications as notice_module
 SESSION_SECONDS = 30 * 24 * 60 * 60
 PAIR_SECONDS = 300
 VERIFY_SECONDS = 600
+# 단체 발표에서는 같은 와이파이를 쓰는 100명 이상이 하나의 IP를 공유합니다.
+# 동시 접속자 수가 아니라 '새 체험 생성 시도'를 세며, 전체 요청 상한도 유지합니다.
+START_WINDOW_SECONDS = 3600
+START_PER_IP_LIMIT = 300
+START_GLOBAL_LIMIT = 1000
 PROCESSES = {'all': ('전체 제철소', None), 'sinter': ('소결공정', 'sinter'),
              'steel': ('제강공정', 'steel')}
 HEX32 = re.compile(r'^[0-9a-f]{32}$')
@@ -127,8 +132,8 @@ class Experience:
         if not isinstance(name, str) or not 1 <= len(name.strip()) <= 40 or any(ord(c) < 32 for c in name):
             raise ValueError('표시 이름 형식')
         ip_hash = digest(str(ip)[:256])
-        self._rate('create-ip:' + ip_hash, 12, 3600)
-        self._rate('create-global', 200, 3600)
+        self._rate('create-ip:' + ip_hash, START_PER_IP_LIMIT, START_WINDOW_SECONDS)
+        self._rate('create-global', START_GLOBAL_LIMIT, START_WINDOW_SECONDS)
         now, ident, round_id = time.time(), secrets.token_hex(16), secrets.token_hex(16)
         visitor = dict(visitor_id=ident, display_name=name.strip(), process_key=PROCESSES[process][1],
                        current_round_id=round_id, creation_ip_hash=ip_hash, created_epoch=now,

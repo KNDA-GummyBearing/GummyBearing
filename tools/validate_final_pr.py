@@ -139,7 +139,7 @@ def main():
     report['static_delivery_tests']={'passed':result.returncode==0,'output':result.stdout+result.stderr}
     if result.returncode: report['errors'].append({'check':'static delivery tests','returncode':result.returncode})
     # Explicit mock/loopback suites only; live-DB fixture scripts are not discovered.
-    suites=['test_report_review_metadata','test_refresh_delivery',
+    suites=['test_experience_capacity','test_report_review_metadata','test_refresh_delivery',
             'test_performance_regressions','test_read_performance']
     report['python_regression_tests']=[]
     for suite in suites:
